@@ -1,3 +1,12 @@
+import img1 from './image/1.jpg';
+import img2 from './image/2.jpg';
+import img3 from './image/3.jpg';
+import img4 from './image/4.jpg';
+import img5 from './image/5.jpg';
+import img6 from './image/6.jpg';
+import img7 from './image/7.jpg';
+import img8 from './image/8.jpg';
+
 export const qnaList = [
   {
     q: '1. 오디션 중 갑자기 다른 장르의 노래를 불러보라는 요구를 받았다!',
@@ -164,35 +173,51 @@ export const qnaList = [
 
 export const infoList = [
   {
-    name: '장난끼 많고 활발한 비글돌',
-    desc: '장난끼 많고 활발한 비글돌 설명',
-  },
-  {
-    name: '각도에 오차란 없다! 칼군무돌',
-    desc: '각도에 오차란 없다! 칼군무돌 설명 ',
+    name: '다가갈 수 없는 아우라 신비주의돌',
+    desc: '다가갈 수 없는 아우라 신비주의돌 설명',
+    partner: '선후배 상관없이 두루두루 잘지내는 인싸돌',
+    img: img1,
   },
   {
     name: '선후배 상관없이 두루두루 잘지내는 인싸돌',
     desc: '선후배 상관없이 두루두루 잘지내는 인싸돌 설명',
-  },
-  {
-    name: '다가갈 수 없는 아우라 신비주의돌',
-    desc: '다가갈 수 없는 아우라 신비주의돌 설명',
-  },
-  {
-    name: '빛이 나는 솔로 아이돌',
-    desc: '빛이 나는 솔로 아이돌 설명',
+    partner: '다가갈 수 없는 아우라 신비주의돌',
+    img: img2,
   },
   {
     name: '아이돌 보단 아~~~리스트',
     desc: '아이돌 보단 아~~~리스트 설명',
-  },
-  {
-    name: '팬들의 마음을 울리는 꿀보이스 발라더',
-    desc: '팬들의 마음을 울리는 꿀보이스 발라더 설명',
+    partner: '각도에 오차란 없다! 칼군무돌',
+    img: img3,
   },
   {
     name: '가장 안좋은 해충은 대충! 무대도 예능도 열정돌',
     desc: '가장 안좋은 해충은 대충! 무대도 예능도 열정돌 설명',
+    partner: '빛이 나는 솔로 아이돌',
+    img: img4,
+  },
+  {
+    name: '빛이 나는 솔로 아이돌',
+    desc: '빛이 나는 솔로 아이돌 설명',
+    partner: '가장 안좋은 해충은 대충! 무대도 예능도 열정돌',
+    img: img5,
+  },
+  {
+    name: '장난끼 많고 활발한 비글돌',
+    desc: '장난끼 많고 활발한 비글돌 설명',
+    partner: '팬들의 마음을 울리는 꿀보이스 발라더',
+    img: img6,
+  },
+  {
+    name: '팬들의 마음을 울리는 꿀보이스 발라더',
+    desc: '팬들의 마음을 울리는 꿀보이스 발라더 설명',
+    partner: '장난끼 많고 활발한 비글돌',
+    img: img7,
+  },
+  {
+    name: '각도에 오차란 없다! 칼군무돌',
+    desc: '각도에 오차란 없다! 칼군무돌 설명 ',
+    partner: '아이돌 보단 아~~~리스트',
+    img: img8,
   },
 ];
