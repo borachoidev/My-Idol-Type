@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { useHistory } from 'react-router';
 
 function Answer({ answer, steps, types }) {
@@ -6,19 +6,28 @@ function Answer({ answer, steps, types }) {
   const [step, setStep] = steps;
   const [type, setType] = types;
 
-  return <div onClick={goNext}> {answer.answer} </div>;
+  useEffect(() => {
+    let result = Object.values(type).reduce((a,b) => a+b);
+    console.log(result);
 
-  function goNext() {
-    setType({ ...type, [answer.type[0]]: type[answer.type[0]] + 1 });
-    if (step === 11) {
+    if (result === 12) {
       const res = calculateResult();
       console.log(type, res);
       history.push({
         pathname: `/result/${res}`,
       });
     }
-    setStep(step + 1);
+  }, [type]);
+
+  return <div onClick={goNext}> {answer.answer} </div>;
+
+  function goNext() {
+    setType({ ...type, [answer.type[0]]: type[answer.type[0]] + 1 });
+    if (step !== 11) {
+      setStep(step + 1);
+    }
   }
+
   function calculateResult() {
     let res = '';
     if (type.E > type.I) {
