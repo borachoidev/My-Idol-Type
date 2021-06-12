@@ -2,19 +2,24 @@
   width: 100%;
   background-color: white;
   margin: 20px 0;
-  padding: 15% 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   border-radius: 15px;
-  font-size: 1.9rem;
-  word-break: keep-all;
+  font-size: 2.5rem;
+  height: 150px;
   border: rgba(0, 0, 0, 0.2) solid 3px;
 }
 @media all and (max-width: 767px) {
   .question-box {
+    display: flex;
+    align-items: center;
     margin: 10px 0 7px 0;
-    padding: 17px 8px;
+    padding: 33px 8px;
     border-radius: 12px;
     border: rgba(0, 0, 0, 0.2) solid 2px;
+    height: 150px;
   }
 }
 

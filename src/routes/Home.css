@@ -1,8 +1,9 @@
 .main {
   width: 35%;
   background-color: white;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   padding: 15px;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -11,10 +12,11 @@
   border: plum solid 5px;
 }
 .main__title {
-  font-size: 4rem;
+  font-size: 3.6rem;
+  margin: 0.7rem;
 }
 .main__description {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   text-align: center;
 }
 
@@ -23,32 +25,37 @@
 }
 .start-btn {
   border: 0;
-  border-radius: 15px;
+  border-radius: 13px;
   background-color: plum;
-  padding: 13px;
+  padding: 10px;
   width: 35vw;
   min-width: 270px;
   font-size: 2rem;
+  min-width: 500px;
 }
 @media all and (max-width: 767px) {
   .main {
-    width: 85%;
-
+    width: 90%;
     min-width: 270px;
     min-height: 450px;
+    margin-bottom: 10px;
+    border: plum solid 3px;
+    border-radius: 10px;
   }
   .start-btn {
-    width: 85vw;
+    width: 90vw;
     min-width: 270px;
+    border-radius: 8px;
   }
 }
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .main {
-    width: 50%;
+    width: 65%;
+    margin-bottom: 15px;
   }
 
   .start-btn {
-    width: 50vw;
+    width: 65vw;
   }
 }

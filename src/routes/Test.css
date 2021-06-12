@@ -1,11 +1,12 @@
 .container {
   width: 35%;
+  min-width: 500px;
   height: 100vh;
   margin-bottom: 20px;
   padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .progress-div {
@@ -23,13 +24,12 @@
 }
 
 .progress-per {
-  margin-bottom: 10px;
+  margin: 1.2rem 0;
   font-size: 1.5rem;
 }
 @media all and (max-width: 767px) {
   .container {
-    width: 85%;
-    justify-content: center;
+    width: 96%;
     min-width: 270px;
     min-height: 500px;
   }
@@ -37,7 +37,6 @@
 
 @media all and (min-width: 768px) and (max-width: 1023px) {
   .container {
-    width: 50%;
-    justify-content: center;
+    width: 65%;
   }
 }

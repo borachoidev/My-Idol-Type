@@ -15,10 +15,14 @@
 
 @media all and (max-width: 767px) {
   .answer-box {
+    display: flex;
+    align-items: center;
     margin: 5px;
-    padding: 10px;
+    height: 100px;
+    padding: 10px 10px;
     border-radius: 10px;
     border: rgba(142, 69, 133, 0.3) solid 2px;
+    font-size: 2.5rem;
   }
 }
 
