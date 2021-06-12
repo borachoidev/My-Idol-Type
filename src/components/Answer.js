@@ -12,7 +12,6 @@ function Answer({ answer, steps, types }) {
 
     if (result === 12) {
       const res = calculateResult();
-      console.log(type, res);
       history.push({
         pathname: `/result/${res}`,
       });

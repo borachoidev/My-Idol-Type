@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Answer from '../components/Answer';
 import Question from '../components/Question';
 import { qnaList } from '../data.js';
