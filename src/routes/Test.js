@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Answer from '../components/Answer';
 import Question from '../components/Question';
 import { qnaList } from '../data.js';
@@ -19,6 +19,13 @@ export default function Test() {
 
   return (
     <div className="container">
+      <span className="progress-per">{step + 1}/12</span>
+      <div className="progress-div">
+        <div style={{ width: `${step * 8.333}%` }} className="progress">
+          &nbsp;
+        </div>
+      </div>
+
       <Question question={qnaList[step].q} />
       <Answer
         answer={qnaList[step].a[0]}
