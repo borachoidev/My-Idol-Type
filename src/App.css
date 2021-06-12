@@ -15,6 +15,7 @@ body {
 
 button {
   cursor: pointer;
+  font-family: 'Yeon Sung', cursive;
 }
 
 #root {

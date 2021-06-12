@@ -26,10 +26,8 @@
   border-radius: 15px;
   background-color: plum;
   padding: 13px;
-  border-radius: 30;
   width: 35vw;
   min-width: 270px;
-  font-family: 'Yeon Sung', cursive;
   font-size: 2rem;
 }
 @media all and (max-width: 767px) {
