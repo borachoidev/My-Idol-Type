@@ -1,0 +1,31 @@
+.answer-box {
+  width: 100%;
+  background-color: white;
+  margin: 7px 0;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 1.7rem;
+  border: rgba(142, 69, 133, 0.3) solid 3px;
+  cursor: pointer;
+}
+.answer-box:hover {
+  color: rgb(190, 54, 175);
+  border: rgb(205, 159, 218) solid 3px;
+}
+
+@media all and (max-width: 767px) {
+  .answer-box {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: rgba(142, 69, 133, 0.3) solid 2px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .answer-box {
+    margin: 5px;
+    padding: 10px;
+    border-radius: 12px;
+  }
+}

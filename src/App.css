@@ -13,6 +13,10 @@ body {
   height: 100%;
 }
 
+button {
+  cursor: pointer;
+}
+
 #root {
   width: 100vw;
   height: 100vh;

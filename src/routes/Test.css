@@ -1,0 +1,25 @@
+.container {
+  width: 35%;
+  height: 100vh;
+  margin-bottom: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media all and (max-width: 767px) {
+  .container {
+    width: 85%;
+    justify-content: center;
+    min-width: 270px;
+    min-height: 500px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    width: 50%;
+    justify-content: center;
+  }
+}

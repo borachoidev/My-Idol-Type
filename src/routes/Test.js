@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import Answer from '../components/Answer';
 import Question from '../components/Question';
 import { qnaList } from '../data.js';
+import './Test.css';
 
-export default function Test(props) {
+export default function Test() {
   const [step, setStep] = useState(0);
   const [type, setType] = useState({
     E: 0,
@@ -17,7 +18,7 @@ export default function Test(props) {
   });
 
   return (
-    <div>
+    <div className="container">
       <Question question={qnaList[step].q} />
       <Answer
         answer={qnaList[step].a[0]}

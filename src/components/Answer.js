@@ -1,5 +1,6 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router';
+import './Answer.css';
 
 function Answer({ answer, steps, types }) {
   const history = useHistory();
@@ -7,8 +8,7 @@ function Answer({ answer, steps, types }) {
   const [type, setType] = types;
 
   useEffect(() => {
-    let result = Object.values(type).reduce((a,b) => a+b);
-    console.log(result);
+    let result = Object.values(type).reduce((a, b) => a + b);
 
     if (result === 12) {
       const res = calculateResult();
@@ -19,7 +19,12 @@ function Answer({ answer, steps, types }) {
     }
   }, [type]);
 
-  return <div onClick={goNext}> {answer.answer} </div>;
+  return (
+    <div className="answer-box" onClick={goNext}>
+      {' '}
+      {answer.answer}{' '}
+    </div>
+  );
 
   function goNext() {
     setType({ ...type, [answer.type[0]]: type[answer.type[0]] + 1 });
@@ -51,7 +56,6 @@ function Answer({ answer, steps, types }) {
     } else {
       res += 'J';
     }
-    console.log(res);
 
     switch (res) {
       case 'ISTP':
