@@ -21,5 +21,7 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "description":"아이돌 유형 테스트",
+  "background_color": "#ffffff",
+  "lang":"ko-KR"
 }
