@@ -6,6 +6,7 @@
   text-align: center;
   border-radius: 15px;
   font-size: 1.9rem;
+  word-break: keep-all;
   border: rgba(0, 0, 0, 0.2) solid 3px;
 }
 @media all and (max-width: 767px) {
