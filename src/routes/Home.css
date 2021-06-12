@@ -1,0 +1,56 @@
+.main {
+  width: 35%;
+  background-color: white;
+  margin-bottom: 20px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 15px;
+  border: plum solid 5px;
+}
+.main__title {
+  font-size: 4rem;
+}
+.main__description {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.main__img {
+  width: 100%;
+}
+.start-btn {
+  border: 0;
+  border-radius: 15px;
+  background-color: plum;
+  padding: 13px;
+  border-radius: 30;
+  width: 35vw;
+  min-width: 270px;
+  font-family: 'Yeon Sung', cursive;
+  font-size: 2rem;
+}
+@media all and (max-width: 767px) {
+  .main {
+    width: 85%;
+
+    min-width: 270px;
+    min-height: 450px;
+  }
+  .start-btn {
+    width: 85vw;
+    min-width: 270px;
+  }
+}
+
+@media all and (min-width: 768px) and (max-width: 1023px) {
+  .main {
+    width: 50%;
+  }
+
+  .start-btn {
+    width: 50vw;
+  }
+}
