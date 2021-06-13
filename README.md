@@ -40,3 +40,10 @@
 결과화면
 
 ![mobile3](https://user-images.githubusercontent.com/66766189/121788820-6835e080-cc0b-11eb-82ea-23fc7ab4aaa5.jpg)
+
+## 해결해야할 문제
+
+- [ ] SEO 최적화
+- [ ] SNS 공유하기 기능
+- [ ] 서버분리해서 결과 집계
+- [ ] UI변경
