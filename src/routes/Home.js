@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import img from '../image/main.png';
 import './Home.css';
@@ -6,6 +7,17 @@ import './Home.css';
 function Home() {
   return (
     <>
+      <Helmet>
+        <meta
+          property="og:title"
+          content="내가 아이돌로 데뷔한다면? | 아이돌 테스트"
+        />
+        <meta
+          property="og:description"
+          content="아이돌로 데뷔한다면 나는 어떤 아이돌? 아이돌 유형 테스트로 알아보자!"
+        />
+        <meta property="og:image" content={img} />
+      </Helmet>
       <div className="main">
         <h1 className="main__title">나의 아이돌 유형은 ?</h1>
         <p className="main__description">

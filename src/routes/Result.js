@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { infoList } from '../data.js';
@@ -27,6 +28,14 @@ function Result() {
 
   return (
     <>
+      <Helmet>
+        <meta property="og:title" content="결과 보기 | 아이돌 테스트" />
+        <meta
+          property="og:description"
+          content={data.name + '| 나의 아이돌 유형도 알아보기!'}
+        />
+        <meta property="og:image" content={data.img} />
+      </Helmet>
       <div className="result-box">
         <h1 className="result__title">{data.name}</h1>
         <img className="result__img" src={data.img} alt={data.name} />
