@@ -18,8 +18,8 @@ function Result() {
     scr.type = 'text/javascript';
     scr.src = '//t1.daumcdn.net/kas/static/ba.min.js';
     ins.setAttribute('data-ad-width', '320');
-    ins.setAttribute('data-ad-height', '100');
-    ins.setAttribute('data-ad-unit', 'DAN-NAQztt31OlW16JM5');
+    ins.setAttribute('data-ad-height', '50');
+    ins.setAttribute('data-ad-unit', 'DAN-iNS6cTHEaa2gLNKW');
 
     document.querySelector('.adfit').appendChild(ins);
     document.querySelector('.adfit').appendChild(scr);
