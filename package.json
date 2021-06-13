@@ -14,7 +14,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build"
+    "build": "react-scripts build",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -33,4 +35,6 @@
       "last 1 safari version"
     ]
   }
+  ,
+  "homepage": "https://september21st.github.io/My-Idol-Type/"
 }
