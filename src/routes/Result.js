@@ -29,12 +29,26 @@ function Result() {
   return (
     <>
       <Helmet>
-        <meta property="og:title" content="결과 보기 | 아이돌 테스트" />
+        <title>결과 보기 | 아이돌 테스트</title>
+        <meta
+          name="description"
+          content={data.name + '| 나의 아이돌 유형도 알아보기!'}
+        />
+        <meta
+          name="keywords"
+          content="아이돌유형,아이돌mbti,아이돌테스트,mitt"
+        />
+        <meta
+          property="og:title"
+          content="결과 보기 | MITT 내아이돌유형테스트"
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:site_name" content="MITT 내아이돌유형테스트" />
         <meta
           property="og:description"
           content={data.name + '| 나의 아이돌 유형도 알아보기!'}
         />
-        <meta property="og:image" content={data.img} />
+        <meta property="og:image" content={data.og} />
       </Helmet>
       <div className="result-box">
         <h1 className="result__title">{data.name}</h1>

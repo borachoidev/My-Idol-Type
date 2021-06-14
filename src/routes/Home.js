@@ -8,6 +8,12 @@ function Home() {
   return (
     <>
       <Helmet>
+        <title>내가 아이돌로 데뷔한다면? | 아이돌 테스트 </title>
+        <meta
+          name="description"
+          content="아이돌로 데뷔한다면 나는 어떤 아이돌? 아이돌 유형 테스트로 알아보자!"
+        />
+        <meta name="keywords" content="아이돌유형,아이돌mbti,아이돌테스트" />
         <meta
           property="og:title"
           content="내가 아이돌로 데뷔한다면? | 아이돌 테스트"
