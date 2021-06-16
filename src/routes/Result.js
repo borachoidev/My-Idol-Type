@@ -9,22 +9,27 @@ function Result() {
   const { type } = useParams();
   const data = infoList[type - 1];
 
-  // useEffect(() => {
-  //   let ins = document.createElement('ins');
-  //   let scr = document.createElement('script');
+  useEffect(() => {
+    let scr = document.createElement('script');
+    scr.type = 'text/javascript';
+    scr.src = '';
 
-  //   ins.className = 'kakao_ad_area';
-  //   ins.style = 'display:none; width:100%;';
-  //   scr.async = 'true';
-  //   scr.type = 'text/javascript';
-  //   scr.src = '//t1.daumcdn.net/kas/static/ba.min.js';
-  //   ins.setAttribute('data-ad-width', '320');
-  //   ins.setAttribute('data-ad-height', '50');
-  //   ins.setAttribute('data-ad-unit', '광고단위코드');
+    //   let ins = document.createElement('ins');
+    //   let scr = document.createElement('script');
 
-  //   document.querySelector('.adfit').appendChild(ins);
-  //   document.querySelector('.adfit').appendChild(scr);
-  // }, []);
+    //   ins.className = 'kakao_ad_area';
+    //   ins.style = 'display:none; width:100%;';
+    //   scr.async = 'true';
+    //   scr.type = 'text/javascript';
+    //   scr.src = '//t1.daumcdn.net/kas/static/ba.min.js';
+    //   ins.setAttribute('data-ad-width', '320');
+    //   ins.setAttribute('data-ad-height', '50');
+    //   ins.setAttribute('data-ad-unit', '광고단위코드');
+
+    //   document.querySelector('.adfit').appendChild(ins);
+    //   document.querySelector('.adfit').appendChild(scr);
+    //
+  }, []);
 
   return (
     <>
@@ -49,6 +54,10 @@ function Result() {
           content={data.name + '| 나의 아이돌 유형도 알아보기!'}
         />
         <meta property="og:image" content={data.og} />
+        <script
+          type="text/javascript"
+          src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60ca01f6b5f03663"
+        />
       </Helmet>
       <div className="result-box">
         <h1 className="result__title">{data.name}</h1>
@@ -58,6 +67,7 @@ function Result() {
         <span className="result__partner__result">{data.partner}</span>
       </div>
       <div className="buttons-box">
+        <div class="addthis_inline_share_toolbox_eab3"></div>
         <Link
           to={{
             pathname: `/`,

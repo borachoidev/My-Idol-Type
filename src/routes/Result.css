@@ -49,7 +49,12 @@
   color: white;
   background-color: rgb(190, 54, 175);
 }
-
+.buttons-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 @media all and (max-width: 767px) {
   .result-box {
     width: 85%;
