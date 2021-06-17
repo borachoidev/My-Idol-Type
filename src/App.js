@@ -4,6 +4,7 @@ import Home from './routes/Home';
 import Result from './routes/Result';
 import './App.css';
 import Test from './routes/Test';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Route exact={true} path="/" component={Home} />
       <Route path="/test" component={Test} />
       <Route path="/result/:type" component={Result} />
+      <Footer />
     </HashRouter>
   );
 }
