@@ -223,7 +223,7 @@ export const infoList = [
   },
   {
     name: '각도에 오차란 없다! 칼군무돌',
-    desc: '프로페셔널하고 냉철한 당신은 한치의 실수도 용납하지 않는 칼군무! 최고의 아이돌이 되기 위해 오늘도 연습실에서 연습하고 있답니다 ',
+    desc: '프로페셔널하고 냉철한 당신은 한치의 실수도 용납하지 않는 칼군무돌! 최고의 아이돌이 되기 위해 오늘도 연습실에서 연습하고 있답니다 ',
     partner: '아이돌 보단 아~~~리스트',
     img: img8,
     og: 'https://drive.google.com/uc?id=12D_zJzBhFnHH_buyrXx372sHA55m902K',
