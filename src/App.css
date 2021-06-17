@@ -1,3 +1,19 @@
+@font-face {
+  font-family: 'locus_sangsang';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'NanumSquareRound';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff')
+    format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   box-sizing: border-box;
   word-break: keep-all;
@@ -5,18 +21,21 @@
 html {
   font-size: 10px;
 }
+/* h1 {
+  font-family: 'locus_sangsang';
+} */
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Yeon Sung', cursive;
+  font-family: 'NanumSquareRound';
   background-color: lavender;
   height: 100%;
 }
 
 button {
   cursor: pointer;
-  font-family: 'Yeon Sung', cursive;
+  font-family: 'NanumSquareRound';
 }
 
 #root {
