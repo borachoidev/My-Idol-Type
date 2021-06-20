@@ -12,13 +12,13 @@
 .progress-div {
   width: 100%;
   height: rem;
-  background-color: rgba(205, 159, 218, 0.4);
+  background-color: #ffffff;
   text-align: center;
   border-radius: 10px;
 }
 
 .progress {
-  background-color: rgb(190, 54, 175);
+  background-color: #ff8800;
   height: rem;
   border-radius: 10px 0 0 10px;
 }

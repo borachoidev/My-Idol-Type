@@ -9,7 +9,7 @@
   border-radius: 15px;
   font-size: 2.5rem;
   height: 150px;
-  border: rgba(0, 0, 0, 0.2) solid 3px;
+  border: hsl(0, 1%, 36%) solid 3px;
 }
 @media all and (max-width: 767px) {
   .question-box {
@@ -18,7 +18,7 @@
     margin: 10px 0 7px 0;
     padding: 33px 8px;
     border-radius: 12px;
-    border: rgba(0, 0, 0, 0.2) solid 2px;
+    border: hsl(0, 1%, 36%) solid 2px;
     height: 150px;
   }
 }

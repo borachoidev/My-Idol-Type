@@ -1,12 +1,4 @@
 @font-face {
-  font-family: 'locus_sangsang';
-  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff')
-    format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
   font-family: 'NanumSquareRound';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff')
     format('woff');
@@ -21,15 +13,12 @@
 html {
   font-size: 10px;
 }
-/* h1 {
-  font-family: 'locus_sangsang';
-} */
 
 body {
   margin: 0;
   padding: 0;
   font-family: 'NanumSquareRound';
-  background-color: lavender;
+  background-color: #f7d494;
   height: 100%;
 }
 

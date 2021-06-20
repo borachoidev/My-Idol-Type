@@ -9,7 +9,7 @@
   justify-content: space-around;
   align-items: center;
   border-radius: 15px;
-  border: plum solid 5px;
+  border: hsl(0, 1%, 36%) 3px solid;
 }
 .main__title {
   font-size: 3.6rem;
@@ -26,7 +26,7 @@
 .start-btn {
   border: 0;
   border-radius: 13px;
-  background-color: plum;
+  background-color: #ff8800;
   padding: 10px;
   width: 35vw;
   min-width: 270px;
@@ -39,7 +39,6 @@
     min-width: 270px;
     min-height: 450px;
     margin-bottom: 10px;
-    border: plum solid 3px;
     border-radius: 10px;
   }
   .start-btn {

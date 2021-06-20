@@ -5,12 +5,12 @@
   padding: 10px;
   border-radius: 15px;
   font-size: 1.7rem;
-  border: rgba(142, 69, 133, 0.3) solid 3px;
+  border: rgba(93, 91, 91, 0.247) solid 3px;
   cursor: pointer;
 }
 .answer-box:hover {
-  color: rgb(190, 54, 175);
-  border: rgb(205, 159, 218) solid 3px;
+  color: #ff8800;
+  border: #ff8800 solid 3px;
 }
 
 @media all and (max-width: 767px) {
@@ -21,13 +21,13 @@
     height: 100px;
     padding: 10px 10px;
     border-radius: 10px;
-    border: rgba(142, 69, 133, 0.3) solid 2px;
+    border: rgba(93, 91, 91, 0.247) solid 2px;
     font-size: 2.5rem;
   }
 
   .answer-box:hover {
     color: unset;
-    border: rgba(142, 69, 133, 0.3) solid 2px;
+    border: rgba(93, 91, 91, 0.247) solid 2px;
   }
 }
 
