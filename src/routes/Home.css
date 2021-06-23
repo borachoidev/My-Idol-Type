@@ -32,6 +32,7 @@
   min-width: 270px;
   font-size: 2rem;
   min-width: 500px;
+  margin-bottom: 20px;
 }
 @media all and (max-width: 767px) {
   .main {
