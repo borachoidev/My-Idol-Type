@@ -6,7 +6,7 @@ import './App.css';
 import Test from './routes/Test';
 import Footer from './components/Footer';
 
-function App() {
+const App: React.FC = ()=> {
   return (
     <HashRouter>
       <Route exact={true} path="/" component={Home} />

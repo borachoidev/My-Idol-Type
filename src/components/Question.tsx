@@ -1,7 +1,7 @@
 import React from 'react';
 import './Question.css';
 
-function Question({ question }) {
+function Question({ question }:any) {
   return <div className="question-box">{question} </div>;
 }
 

@@ -1,13 +1,20 @@
 import React, { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router';
 import { Link } from 'react-router-dom';
 import { infoList } from '../data.js';
+import Metatag from "../components/Metatag";
 import './Result.css';
 
 function Result() {
-  const { type } = useParams();
-  const data = infoList[type - 1];
+  const { type }: any = useParams();
+  type datas = {
+    name: string,
+    desc: string,
+    partner: string,
+    img: string,
+    og: string,
+  }
+  const data:datas = infoList[parseInt(type) - 1];
 
   useEffect(() => {
     let scr = document.createElement('script');
@@ -33,40 +40,8 @@ function Result() {
 
   return (
     <>
-      <Helmet>
-        <title>결과 보기 | 아이돌 테스트</title>
-        <meta
-          name="description"
-          content={data.name + '| 나의 아이돌 유형도 알아보기!'}
-          data-react-helmet="true"
-        />
-        <meta
-          name="keywords"
-          content="아이돌유형,아이돌mbti,아이돌테스트,mitt"
-          data-react-helmet="true"
-        />
-        <meta
-          property="og:title"
-          content="결과 보기 | MITT 내아이돌유형테스트"
-          data-react-helmet="true"
-        />
-        <meta property="og:type" content="article" data-react-helmet="true" />
-        <meta
-          property="og:site_name"
-          content="MITT 내아이돌유형테스트"
-          data-react-helmet="true"
-        />
-        <meta
-          property="og:description"
-          content={data.name + '| 나의 아이돌 유형도 알아보기!'}
-          data-react-helmet="true"
-        />
-        <meta property="og:image" content={data.og} data-react-helmet="true" />
-        <script
-          type="text/javascript"
-          src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60ca01f6b5f03663"
-        />
-      </Helmet>
+    <Metatag title="결과 보기" description={data.name +'| 나의 아이돌 유형 알아보기'} image={data.og}/>
+
       <div className="result-box">
         <h1 className="result__title">{data.name}</h1>
         <img className="result__img" src={data.img} alt={data.name} />
@@ -75,7 +50,7 @@ function Result() {
         <span className="result__partner__result">{data.partner}</span>
       </div>
       <div className="buttons-box">
-        <div class="addthis_inline_share_toolbox_eab3"></div>
+        <div className="addthis_inline_share_toolbox_eab3"></div>
         <Link
           to={{
             pathname: `/`,

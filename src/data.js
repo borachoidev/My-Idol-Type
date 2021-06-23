@@ -14,11 +14,11 @@ export const qnaList = [
       {
         answer:
           'a. 이럴줄 알고 진작에 준비했지! 혹시 몰라 준비해둔 노래를 부른다',
-        type: ['J'],
+        type: 'J',
       },
       {
         answer: 'b. 따로 준비한 노래 없이 그냥 노래방 애창곡을 부른다',
-        type: ['P'],
+        type: 'P',
       },
     ],
   },
@@ -27,11 +27,11 @@ export const qnaList = [
     a: [
       {
         answer: 'a. "빨리 병원부터 가봐!" ',
-        type: ['T'],
+        type: 'T',
       },
       {
         answer: 'b. "어떡해! 괜찮아? 많이 아파?"',
-        type: ['F'],
+        type: 'F',
       },
     ],
   },
@@ -40,11 +40,11 @@ export const qnaList = [
     a: [
       {
         answer: 'a. 정리 잘 된 깔끔한 방',
-        type: ['J'],
+        type: 'J',
       },
       {
         answer: 'b. 내 물건이 어디있는 지 나만 아는 방',
-        type: ['P'],
+        type: 'P',
       },
     ],
   },
@@ -53,11 +53,11 @@ export const qnaList = [
     a: [
       {
         answer: 'a. 나의 경험을 바탕으로한 가사',
-        type: ['S'],
+        type: 'S',
       },
       {
         answer: 'b. 상상의 나래를 펼쳐 만든 가사',
-        type: ['N'],
+        type: 'N',
       },
     ],
   },
@@ -67,12 +67,12 @@ export const qnaList = [
       {
         answer:
           'a. "이번 앨범은 듣기만 해도 시원해지는 여름에 잘 어울리는 곡입니다!”',
-        type: ['N'],
+        type: 'N',
       },
       {
         answer:
           'b. "이번 앨범은 트로피컬 하우스 장르의 여름 바다를 놀러가는 가사의 곡입니다!"',
-        type: ['S'],
+        type: 'S',
       },
     ],
   },
@@ -82,11 +82,11 @@ export const qnaList = [
     a: [
       {
         answer: 'a. 런O맨',
-        type: ['T'],
+        type: 'T',
       },
       {
         answer: 'b. 효O네 민박',
-        type: ['F'],
+        type: 'F',
       },
     ],
   },
@@ -95,11 +95,11 @@ export const qnaList = [
     a: [
       {
         answer: 'a. "에이 몰라~ 나의 꾸밈없는 모습을 보여주지” 그냥 잠이 든다',
-        type: ['P'],
+        type: 'P',
       },
       {
         answer: 'b. 뭘 시킬지 몰라 있는 개인기를 연습하다 잠이든다',
-        type: ['J'],
+        type: 'J',
       },
     ],
   },
@@ -108,11 +108,11 @@ export const qnaList = [
     a: [
       {
         answer: 'a. 집에서 편히 쉴래~',
-        type: ['I'],
+        type: 'I',
       },
       {
         answer: 'b. 휴가는 뭐니 뭐니 해도 여행이지!',
-        type: ['E'],
+        type: 'E',
       },
     ],
   },
@@ -121,11 +121,11 @@ export const qnaList = [
     a: [
       {
         answer: 'a. 기존 컨셉과 비슷하지만 다른 컨셉',
-        type: ['S'],
+        type: 'S',
       },
       {
         answer: 'b. 기존 컨셉과 완전 반대의 컨셉',
-        type: ['N'],
+        type: 'N',
       },
     ],
   },
@@ -134,11 +134,11 @@ export const qnaList = [
     a: [
       {
         answer: 'a. "안돼요~” 현실적으로 불가능한건 안 돼~ ',
-        type: ['T'],
+        type: 'T',
       },
       {
         answer: 'b. "좋아요!” 우리 팬이라면 뭐든지 좋아~ ',
-        type: ['F'],
+        type: 'F',
       },
     ],
   },
@@ -147,12 +147,12 @@ export const qnaList = [
     a: [
       {
         answer: 'a. "아..안녕, 수고해!" 어색한 대화를 서둘러 마무리한다.',
-        type: ['I'],
+        type: 'I',
       },
       {
         answer:
           'b. "너네가 OO이구나! 오늘 무대도 잘해!" 잘 몰라도 일단은 아는척 해준다. ',
-        type: ['E'],
+        type: 'E',
       },
     ],
   },
@@ -161,11 +161,11 @@ export const qnaList = [
     a: [
       {
         answer: 'a. 각종 하트 + 윙크 + 잔망부리기 ',
-        type: ['E'],
+        type: 'E',
       },
       {
         answer: 'b. 수줍게 하트...💕',
-        type: ['I'],
+        type: 'I',
       },
     ],
   },
