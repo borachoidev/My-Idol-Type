@@ -44,6 +44,7 @@
   min-width: 270px;
   font-size: 1.8rem;
   min-width: 500px;
+  margin-bottom: 20px;
 }
 .restart-btn:hover {
   color: white;

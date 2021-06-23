@@ -8,7 +8,7 @@ function Answer({ answer, steps, types }:any) {
   const [type, setType] = types;
 
   useEffect(() => {
-    let typeArray :number[]=Object.values(type);
+    const typeArray :number[]=Object.values(type);
     let result:number = typeArray.reduce((a, b) =>  a + b);
 
     if (result === 12) {
