@@ -5,17 +5,23 @@ import { qnaList } from '../data.js';
 import './Test.css';
 
 export default function Test() {
-  const [step, setStep] = useState(0);
-  const [type, setType] = useState({
-    E: 0,
+  const [step, setStep] = useState<number>(0);
+  type types = { E: number,
+    I: number,
+    N: number,
+    S: number,
+    T: number,
+    F: number,
+    P: number,
+    J: number}
+  const [type, setType] = useState<types>({E: 0,
     I: 0,
     N: 0,
     S: 0,
     T: 0,
     F: 0,
     P: 0,
-    J: 0,
-  });
+    J: 0});
 
   return (
     <div className="container">

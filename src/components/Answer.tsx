@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 import { useHistory } from 'react-router';
 import './Answer.css';
 
-function Answer({ answer, steps, types }) {
+function Answer({ answer, steps, types }:any) {
   const history = useHistory();
   const [step, setStep] = steps;
   const [type, setType] = types;
 
   useEffect(() => {
-    let result = Object.values(type).reduce((a, b) => a + b);
+    let typeArray :number[]=Object.values(type);
+    let result:number = typeArray.reduce((a, b) =>  a + b);
 
     if (result === 12) {
       const res = calculateResult();
@@ -20,13 +21,12 @@ function Answer({ answer, steps, types }) {
 
   return (
     <div className="answer-box" onClick={goNext}>
-      {' '}
-      {answer.answer}{' '}
+      {answer.answer}
     </div>
   );
 
   function goNext() {
-    setType({ ...type, [answer.type[0]]: type[answer.type[0]] + 1 });
+    setType({ ...type, [answer.type]: type[answer.type] + 1 });
     if (step !== 11) {
       setStep(step + 1);
     }
