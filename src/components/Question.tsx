@@ -1,8 +1,7 @@
-import React from 'react';
-import './Question.css';
+import React from 'react'
 
-function Question({ question }:any) {
-  return <div className="question-box">{question} </div>;
+function Question({ question }: any) {
+  return <div className="question-box">{question} </div>
 }
 
-export default Question;
+export default Question

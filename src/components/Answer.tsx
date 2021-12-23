@@ -1,96 +1,93 @@
-import React, { useEffect } from 'react';
-import { useHistory } from 'react-router';
-import './Answer.css';
+import { useRouter } from 'next/router'
+import React, { useEffect } from 'react'
 
-function Answer({ answer, steps, types }:any) {
-  const history = useHistory();
-  const [step, setStep] = steps;
-  const [type, setType] = types;
+function Answer({ answer, steps, types }: any) {
+  const router = useRouter()
+  const [step, setStep] = steps
+  const [type, setType] = types
 
   useEffect(() => {
-    const typeArray :number[]=Object.values(type);
-    let result:number = typeArray.reduce((a, b) =>  a + b);
+    const typeArray: number[] = Object.values(type)
+    let result: number = typeArray.reduce((a, b) => a + b)
 
     if (result === 12) {
-      const res = calculateResult();
-      history.push({
-        pathname: `/result/${res}`,
-      });
+      const res = calculateResult()
+      router.push(`/result/${res}`)
     }
-  }, [type]);
+  }, [type])
 
   return (
     <div className="answer-box" onClick={goNext}>
       {answer.answer}
     </div>
-  );
+  )
 
   function goNext() {
-    setType({ ...type, [answer.type]: type[answer.type] + 1 });
+    setType({ ...type, [answer.type]: type[answer.type] + 1 })
     if (step !== 11) {
-      setStep(step + 1);
+      setStep(step + 1)
     }
   }
 
   function calculateResult() {
-    let res = '';
+    let res = ''
     if (type.E > type.I) {
-      res += 'E';
+      res += 'E'
     } else {
-      res += 'I';
+      res += 'I'
     }
 
     if (type.N > type.S) {
-      res += 'N';
+      res += 'N'
     } else {
-      res += 'S';
+      res += 'S'
     }
     if (type.F > type.T) {
-      res += 'F';
+      res += 'F'
     } else {
-      res += 'T';
+      res += 'T'
     }
     if (type.P > type.J) {
-      res += 'P';
+      res += 'P'
     } else {
-      res += 'J';
+      res += 'J'
     }
 
     switch (res) {
       case 'ISTP':
       case 'INTP':
-        res = '1';
-        break;
+        res = '1'
+        break
       case 'ESFJ':
       case 'ENFJ':
-        res = '2';
-        break;
+        res = '2'
+        break
       case 'ISFP':
       case 'INFP':
-        res = '3';
-        break;
+        res = '3'
+        break
       case 'ENFP':
       case 'ENTP':
-        res = '4';
-        break;
+        res = '4'
+        break
       case 'ISTJ':
       case 'INTJ':
-        res = '5';
-        break;
+        res = '5'
+        break
       case 'ESTP':
       case 'ESFP':
-        res = '6';
-        break;
+        res = '6'
+        break
       case 'ISFJ':
       case 'INFJ':
-        res = '7';
-        break;
+        res = '7'
+        break
       default:
-        res = '8';
-        break;
+        res = '8'
+        break
     }
-    return res;
+    return res
   }
 }
 
-export default Answer;
+export default Answer
