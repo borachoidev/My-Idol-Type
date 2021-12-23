@@ -1,7 +1,8 @@
 import React from 'react'
+import 'twin.macro'
 
 function Question({ question }: any) {
-  return <div className="question-box">{question} </div>
+  return <div>{question} </div>
 }
 
 export default Question

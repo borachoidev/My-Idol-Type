@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import Answer from '../components/Answer'
+import Layout from '../components/Layout'
 import Question from '../components/Question'
 import { qnaList } from '../data'
+import 'twin.macro'
 
-export default function Test() {
+const Test = () => {
   const [step, setStep] = useState<number>(0)
   type types = {
     E: number
@@ -29,8 +31,13 @@ export default function Test() {
   return (
     <div>
       <span>{step + 1}/12</span>
-      <div>
-        <div style={{ width: `${step * 8.333}%` }}>&nbsp;</div>
+      <div tw="bg-gray-100 rounded-full overflow-hidden height[10px]">
+        <div
+          style={{ width: `${step * 8.333}%` }}
+          tw="bg-red-500 transition-all"
+        >
+          &nbsp;
+        </div>
       </div>
 
       <Question question={qnaList[step].q} />
@@ -46,4 +53,9 @@ export default function Test() {
       />
     </div>
   )
+}
+
+export default Test
+Test.getLayout = function getLayout(page: React.ReactElement) {
+  return <Layout>{page}</Layout>
 }
