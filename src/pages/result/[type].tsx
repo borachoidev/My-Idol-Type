@@ -1,11 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { useEffect, useState } from 'react'
+import React, { ReactElement, useEffect, useState } from 'react'
 import Layout from '../../components/Layout'
 
 import { infoList } from '../../data'
 import 'twin.macro'
+import Test from '~/pages/test'
 
 function Result() {
   const router = useRouter()
@@ -57,6 +58,6 @@ function Result() {
 
 export default Result
 
-Result.getLayout = function getLayout(page: React.ReactElement) {
+Result.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }

@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
+import React, { ReactElement, useState } from 'react'
 import Answer from '../components/Answer'
 import Layout from '../components/Layout'
 import Question from '../components/Question'
 import { qnaList } from '../data'
 import 'twin.macro'
+import Home from '~/pages/index'
 
 const Test = () => {
   const [step, setStep] = useState<number>(0)
@@ -56,6 +57,6 @@ const Test = () => {
 }
 
 export default Test
-Test.getLayout = function getLayout(page: React.ReactElement) {
+Test.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
