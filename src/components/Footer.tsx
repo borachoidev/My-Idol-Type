@@ -11,8 +11,8 @@ function Footer() {
     scr.type = 'text/javascript'
     scr.src = '//t1.daumcdn.net/kas/static/ba.min.js'
     ins.setAttribute('data-ad-width', '320')
-    ins.setAttribute('data-ad-height', '50')
-    ins.setAttribute('data-ad-unit', 'DAN-VPF3F22tDD0FMIrO')
+    ins.setAttribute('data-ad-height', '100')
+    ins.setAttribute('data-ad-unit', 'DAN-dhOxOzGqmHehYB7w')
 
     const { current } = adfit
 
@@ -23,7 +23,6 @@ function Footer() {
   return (
     <footer>
       <div ref={adfit}></div>
-      <span>Copyright 2021. Bora Choi all rights reserved.</span>
     </footer>
   )
 }

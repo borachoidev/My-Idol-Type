@@ -18,7 +18,10 @@ function Answer({ answer, steps, types }: any) {
   }, [type])
 
   return (
-    <div className="answer-box" onClick={goNext}>
+    <div
+      tw="py-2 px-4 border border-gray-300 rounded-lg text-left cursor-pointer"
+      onClick={goNext}
+    >
       {answer.answer}
     </div>
   )
