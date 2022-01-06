@@ -10,10 +10,13 @@ function Layout({ children, ...props }: LayoutProps) {
   return (
     <>
       <Header />
-      <section>{children}</section>
+      <Section>{children}</Section>
       <Footer />
     </>
   )
 }
-
+const Section = styled.section`
+  min-height: calc(100vh - 160px);
+  ${tw`pb-4`}
+`
 export default Layout
