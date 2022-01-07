@@ -19,7 +19,7 @@ function Answer({ answer, steps, types }: any) {
 
   return (
     <div
-      tw="py-2 px-4 border border-gray-300 rounded-lg text-left cursor-pointer"
+      tw="border border-gray-200 rounded-lg py-4 px-2 cursor-pointer word-break[keep-all]"
       onClick={goNext}
     >
       {answer.answer}
