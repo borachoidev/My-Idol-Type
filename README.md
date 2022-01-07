@@ -1,4 +1,4 @@
-# [My Idol Type Test (MITT)](https://september21st.github.io/My-Idol-Type/)
+# [My Idol Type Test (MITT)](https://my-idol-type-test.vercel.app)
 
 내가 만약 아이돌로 데뷔한다면 나는 어떤 아이돌일까?  
 나의 아이돌 유형을 알아보는 성격 테스트!
