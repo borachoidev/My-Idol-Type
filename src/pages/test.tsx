@@ -1,10 +1,8 @@
 import React, { ReactElement, useState } from 'react'
 import Answer from '../components/Answer'
 import Layout from '../components/Layout'
-import Question from '../components/Question'
 import { qnaList } from '../data'
 import 'twin.macro'
-import Home from '~/pages/index'
 
 const Test = () => {
   const [step, setStep] = useState<number>(0)
@@ -30,29 +28,33 @@ const Test = () => {
   })
 
   return (
-    <div>
+    <section tw="px-4">
       <span>{step + 1}/12</span>
       <div tw="bg-gray-100 rounded-full overflow-hidden height[10px]">
         <div
           style={{ width: `${step * 8.333}%` }}
-          tw="bg-red-500 transition-all"
+          tw="bg-pink-700 transition-all"
         >
           &nbsp;
         </div>
       </div>
+      <article tw="p-5 text-center word-break[keep-all] text-xl text-pink-500 height[120px]">
+        <p>{qnaList[step].q}</p>
+      </article>
 
-      <Question question={qnaList[step].q} />
-      <Answer
-        answer={qnaList[step].a[0]}
-        steps={[step, setStep]}
-        types={[type, setType]}
-      />
-      <Answer
-        answer={qnaList[step].a[1]}
-        steps={[step, setStep]}
-        types={[type, setType]}
-      />
-    </div>
+      <article tw="text-center space-y-4">
+        <Answer
+          answer={qnaList[step].a[0]}
+          steps={[step, setStep]}
+          types={[type, setType]}
+        />
+        <Answer
+          answer={qnaList[step].a[1]}
+          steps={[step, setStep]}
+          types={[type, setType]}
+        />
+      </article>
+    </section>
   )
 }
 

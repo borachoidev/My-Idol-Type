@@ -6,7 +6,6 @@ import Layout from '../../components/Layout'
 
 import { infoList } from '../../data'
 import 'twin.macro'
-import Test from '~/pages/test'
 
 function Result() {
   const router = useRouter()
@@ -28,25 +27,42 @@ function Result() {
 
   if (!result) return null
   return (
-    <section tw="">
-      <h1 tw="text-2xl font-bold word-break[keep-all] px-5">{result.name}</h1>
-      <Image
-        width={472}
-        height={472}
-        src={`/images/${result.id}.jpg`}
-        alt={result.name}
-        tw="rounded-lg"
-      />
+    <section tw="space-y-3">
+      <div tw="p-3 space-y-3">
+        <h1 tw="text-2xl font-bold word-break[keep-all] px-5 text-pink-500">
+          {result.name}
+        </h1>
+        <div>
+          <Image
+            width={425}
+            height={425}
+            src={`/images/${result.id}.jpg`}
+            alt={result.name}
+          />
+        </div>
 
-      <p tw="whitespace-pre-line word-break[keep-all] p-2">{result.desc}</p>
-      <h3 tw="font-bold">나와 캐미터지는 아이돌은 ?</h3>
-      <span>{result.partner}</span>
+        <div tw="px-3 text-center">
+          <p tw="whitespace-pre-line word-break[keep-all] text-center">
+            {result.desc}
+          </p>
+        </div>
+      </div>
 
-      <div>
+      <div tw="p-3 text-center space-y-1">
+        <h3 tw="font-bold text-lg text-pink-500">나와 캐미터지는 아이돌은 ?</h3>
+        <p>{result.partner}</p>
+      </div>
+
+      <Link href="/types">
+        <div role={'button'} tw="underline text-center text-gray-500">
+          다른 유형 확인하기
+        </div>
+      </Link>
+      <div tw="p-3">
         <Link href="/test">
           <button
             type="button"
-            tw="py-4 w-full  bg-gray-400 rounded hover:bg-gray-500"
+            tw="py-4 w-full bg-gray-500 rounded text-pink-300"
           >
             다시하기
           </button>
