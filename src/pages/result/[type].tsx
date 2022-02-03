@@ -6,12 +6,20 @@ import Layout from '../../components/Layout'
 
 import { infoList } from '../../data'
 import 'twin.macro'
+import { KAKAO_KEY } from '~/constants'
 
 function Result() {
   const router = useRouter()
   const [result, setResult] = useState<Data>()
 
   const { type } = router.query
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const { Kakao } = window
+      Kakao.init(KAKAO_KEY)
+    }
+  }, [])
 
   type Data = {
     name: string
@@ -29,22 +37,13 @@ function Result() {
   return (
     <section tw="space-y-3">
       <div tw="p-3 space-y-3">
-        <h1 tw="text-2xl font-bold word-break[keep-all] px-5 text-pink-500">
-          {result.name}
-        </h1>
+        <h1 tw="text-2xl font-bold word-break[keep-all] px-5 text-pink-500">{result.name}</h1>
         <div>
-          <Image
-            width={425}
-            height={425}
-            src={`/images/${result.id}.jpg`}
-            alt={result.name}
-          />
+          <Image width={425} height={425} src={`/images/${result.id}.jpg`} alt={result.name} />
         </div>
 
         <div tw="px-3 text-center">
-          <p tw="whitespace-pre-line word-break[keep-all] text-center">
-            {result.desc}
-          </p>
+          <p tw="whitespace-pre-line word-break[keep-all] text-center">{result.desc}</p>
         </div>
       </div>
 
@@ -60,10 +59,7 @@ function Result() {
       </Link>
       <div tw="p-3">
         <Link href="/test">
-          <button
-            type="button"
-            tw="py-4 w-full bg-gray-500 rounded text-pink-300"
-          >
+          <button type="button" tw="py-4 w-full bg-gray-500 rounded text-pink-300">
             다시하기
           </button>
         </Link>

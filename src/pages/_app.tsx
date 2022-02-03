@@ -11,6 +11,12 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
+declare global {
+  interface Window {
+    Kakao: any
+  }
+}
+
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
   return (
