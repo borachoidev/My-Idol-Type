@@ -14,6 +14,8 @@ type AppPropsWithLayout = AppProps & {
 declare global {
   interface Window {
     Kakao: any
+    fbAsyncInit: any
+    FB: any
   }
 }
 

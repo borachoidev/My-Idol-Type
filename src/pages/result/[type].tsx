@@ -6,29 +6,41 @@ import Layout from '../../components/Layout'
 
 import { infoList } from '../../data'
 import 'twin.macro'
-import { KAKAO_KEY } from '~/constants'
+import { FB_APP_ID, KAKAO_KEY } from '~/constants'
+import { styled } from 'twin.macro'
 
+interface IResult {
+  name: string
+  desc: string
+  partner: string
+  id: number
+  og: string
+}
 function Result() {
   const router = useRouter()
-  const [result, setResult] = useState<Data>()
+  const [result, setResult] = useState<IResult>()
 
   const { type } = router.query
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const { Kakao } = window
-      Kakao.init(KAKAO_KEY)
-    }
+    console.log(window.location.origin + window.location.pathname)
+    if (typeof window === 'undefined') return
+    initKakaoSdk()
   }, [])
 
-  type Data = {
-    name: string
-    desc: string
-    partner: string
-    id: number
-    og: string
+  const initKakaoSdk = () => {
+    const { Kakao } = window
+    if (!Kakao.isInitialized()) Kakao.init(KAKAO_KEY)
   }
-  console.log('type', type)
+
+  const shareToKaKao = () => {
+    const { Kakao } = window
+    Kakao.Link.sendCustom({
+      templateId: 70113,
+      templateArgs: { NAME: result?.name, THUM: `/images/${result?.id}.jpg` },
+    })
+  }
+
   useEffect(() => {
     setResult(infoList[Number(type) - 1])
   }, [type])
@@ -37,7 +49,7 @@ function Result() {
   return (
     <section tw="space-y-3">
       <div tw="p-3 space-y-3">
-        <h1 tw="text-2xl font-bold word-break[keep-all] px-5 text-pink-500">{result.name}</h1>
+        <h1 tw="text-2xl font-bold word-break[keep-all] px-5 text-pink-500 text-center">{result.name}</h1>
         <div>
           <Image width={425} height={425} src={`/images/${result.id}.jpg`} alt={result.name} />
         </div>
@@ -64,6 +76,12 @@ function Result() {
           </button>
         </Link>
       </div>
+      <div tw="px-3 py-1">
+        <p tw=" text-center text-gray-500">친구에게 나의 아이돋 유형 공유하기</p>
+        <div tw="flex space-x-2 justify-center">
+          <KakaoLinkButton onClick={shareToKaKao} id="kakao-link-btn" />
+        </div>
+      </div>
     </section>
   )
 }
@@ -73,3 +91,11 @@ export default Result
 Result.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
+
+const KakaoLinkButton = styled.div`
+  background: url('/images/share/kakao.png');
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`
