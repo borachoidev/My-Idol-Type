@@ -3,8 +3,7 @@ export const qnaList = [
     q: '오디션 중 갑자기 다른 장르의 노래를 불러보라는 요구를 받았다! 나는 ...',
     a: [
       {
-        answer:
-          'a. 이럴줄 알고 진작에 준비했지! 혹시 몰라 준비해둔 노래를 부른다',
+        answer: 'a. 이럴줄 알고 진작에 준비했지! 혹시 몰라 준비해둔 노래를 부른다',
         type: 'J',
       },
       {
@@ -56,13 +55,11 @@ export const qnaList = [
     q: '"신곡에 대해서 소개해주세요!"',
     a: [
       {
-        answer:
-          'a. "이번 앨범은 듣기만 해도 시원해지는 여름에 잘 어울리는 곡입니다!”',
+        answer: 'a. "이번 앨범은 듣기만 해도 시원해지는 여름에 잘 어울리는 곡입니다!”',
         type: 'N',
       },
       {
-        answer:
-          'b. "이번 앨범은 트로피컬 하우스 장르의 여름 바다를 놀러가는 가사의 곡입니다!"',
+        answer: 'b. "이번 앨범은 트로피컬 하우스 장르의 여름 바다를 놀러가는 가사의 곡입니다!"',
         type: 'S',
       },
     ],
@@ -141,8 +138,7 @@ export const qnaList = [
         type: 'I',
       },
       {
-        answer:
-          'b. "너네가 OO이구나! 오늘 무대도 잘해!" 잘 몰라도 일단은 아는척 해준다. ',
+        answer: 'b. "너네가 OO이구나! 오늘 무대도 잘해!" 잘 몰라도 일단은 아는척 해준다. ',
         type: 'E',
       },
     ],
@@ -168,55 +164,55 @@ export const infoList = [
     desc: '자신만의 세계에 있는 당신은 신비주의?! \n 무슨 생각을 하고있는지 모르겠는 오묘한 매력이 팬들의 관심을 불러일으킨답니다🔮',
     partner: '선후배 상관없이 두루두루 잘지내는 인싸돌',
     id: 1,
-    og: 'https://drive.google.com/uc?id=1CkFx3ExaF3mi9u8YcmOQK8uBigmZUZE4',
+    og: 'https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/1.jpg',
   },
   {
     name: '선후배 상관없이 두루두루 잘지내는 인싸돌',
     desc: '만나는 사람마다 팬으로 만들어버리는 당신이 바로 이 시대의 인싸! \n 훌륭한 말솜씨와 주변 사람에게 친근한 당신은 모든 사람을 당신의 팬으로 만들어요! ',
     partner: '다가갈 수 없는 아우라 신비주의돌',
     id: 2,
-    og: 'https://drive.google.com/uc?id=1lHMBKJm0eMH3C2nvAVPwOTCiTiFg14Is',
+    og: 'https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/2.jpg',
   },
   {
     name: '아이돌 보단 아~~~리스트',
     desc: '자신만의 세계관이 확실한 당신! \n 그 세계관이 담긴 음악으로 대중들의 마음을 사로잡는 아티스트 🎤',
     partner: '각도에 오차란 없다! 칼군무돌',
     id: 3,
-    og: 'https://drive.google.com/uc?id=1GMbPt5zGXzhslUEurwyvh-JbZQzcv77J',
+    og: 'https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/3.jpg',
   },
   {
     name: '가장 안좋은 해충은 대충! 무대도 예능도 열정돌',
     desc: '아침에 일어나자마자 연습실로 향할 것 같은 당신!\n 다재다능하고 넘치는 자신감으로 무장한 당신은 365일 여름같은 열정돌☀️',
     partner: '빛이 나는 솔로 아이돌',
     id: 4,
-    og: 'https://drive.google.com/uc?id=1WZmjUIxP0yeHXse5v0SROL2RYI_C-u_L',
+    og: 'https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/4.jpg',
   },
   {
     name: '빛이 나는 솔로 아이돌',
     desc: '뚝심있고 자기애가 강한 당신은 빛이 나는 솔로 아이돌! \n 좋은 결과를 만들어 내기위해 불철주야 노력하는 당신은 솔로 아이돌이 어울려요~',
     partner: '가장 안좋은 해충은 대충! 무대도 예능도 열정돌',
     id: 5,
-    og: 'https://drive.google.com/uc?id=1KkPPIkFpgkyiiArMokG419UlB_RP-7p8',
+    og: 'https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/5.jpg',
   },
   {
     name: '장난끼 많고 활발한 비글돌',
     desc: '어디로 튈지 모르는 당신은 인간 비글!\n 활발하고 사교적인 모습으로 어디서나 관심을 한 몸에 받는 분위기메이커!',
     partner: '팬들의 마음을 울리는 꿀보이스 발라더',
     id: 6,
-    og: 'https://drive.google.com/uc?id=1PiqUL7K4udUQ-TQhBNfk3p21fVGUNEzL',
+    og: 'https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/6.jpg',
   },
   {
     name: '팬들의 마음을 울리는 꿀보이스 발라더',
     desc: '뛰어난 실력으로 좌중을 사로잡는 당신은 최고의 발라더! \n 부드러운 카리스마를 가진 당신은 팬들의 마음을 눈처럼 녹여버린답니다',
     partner: '장난끼 많고 활발한 비글돌',
     id: 7,
-    og: 'https://drive.google.com/uc?id=1yAZwf3J9Y5C48GMAJ8I2nkxdTKB-cKs4',
+    og: 'https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/7.jpg',
   },
   {
     name: '각도에 오차란 없다! 칼군무돌',
     desc: '프로페셔널하고 냉철한 당신은 한치의 실수도 용납하지 않는 칼군무돌! \n 최고의 아이돌이 되기 위해 오늘도 연습실에서 연습하고 있답니다 ',
     partner: '아이돌 보단 아~~~리스트',
     id: 8,
-    og: 'https://drive.google.com/uc?id=12D_zJzBhFnHH_buyrXx372sHA55m902K',
+    og: 'https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/8.jpg',
   },
 ]

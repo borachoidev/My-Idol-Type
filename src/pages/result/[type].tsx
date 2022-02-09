@@ -37,7 +37,7 @@ function Result() {
     const { Kakao } = window
     Kakao.Link.sendCustom({
       templateId: 70113,
-      templateArgs: { NAME: result?.name, THUM: `/images/${result?.id}.jpg` },
+      templateArgs: { NAME: result?.name, THUM: result?.og },
     })
   }
 
