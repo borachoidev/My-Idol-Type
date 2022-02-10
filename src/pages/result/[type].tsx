@@ -8,6 +8,7 @@ import { infoList } from '../../data'
 import 'twin.macro'
 import { FB_APP_ID, KAKAO_KEY } from '~/constants'
 import { styled } from 'twin.macro'
+import Metatag from '~/components/Metatag'
 
 interface IResult {
   name: string
