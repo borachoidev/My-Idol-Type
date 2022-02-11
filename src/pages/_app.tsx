@@ -21,6 +21,7 @@ declare global {
 
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
+
   return (
     <div tw="bg-black">
       <RootContainer>{getLayout(<Component {...pageProps} />)}</RootContainer>

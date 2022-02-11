@@ -11,6 +11,7 @@ import { infoList } from '~/data'
 import { FB_APP_ID, KAKAO_KEY } from '~/constants'
 import { styled } from 'twin.macro'
 import Metatag from '~/components/Metatag'
+import { GetStaticPaths, GetStaticProps } from 'next'
 
 interface IResult {
   name: string
@@ -19,15 +20,8 @@ interface IResult {
   id: number
   og: string
 }
-function Result() {
-  const router = useRouter()
-  const [result, setResult] = useState<IResult>()
-
-  const { type } = router.query
-
-  const pageUrl = useMemo(() => {
-    if (typeof window !== 'undefined') return `${window.location.origin}${window.location.pathname}`
-  }, [])
+function Result({ result, type }: { result: IResult; type: string }) {
+  const pageUrl = useMemo(() => `https://my-idol-type-test.vercel.app/result/${type}`, [])
 
   useEffect(() => {
     if (typeof window === 'undefined') return
@@ -72,10 +66,6 @@ function Result() {
       }
     )
   }
-
-  useEffect(() => {
-    setResult(infoList[Number(type) - 1])
-  }, [type])
 
   if (!result) return null
   return (
@@ -156,3 +146,31 @@ const TwitterLinkButton = styled.div`
   height: 32px;
   cursor: pointer;
 `
+
+export const getStaticProps: GetStaticProps = (context) => {
+  const { params } = context
+  if (!params)
+    return {
+      notFound: true,
+    }
+
+  return {
+    props: { result: infoList[Number(params.type) - 1], type: params.type },
+  }
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: [
+      { params: { type: '1' } },
+      { params: { type: '2' } },
+      { params: { type: '3' } }, // See the "paths" section below
+      { params: { type: '4' } },
+      { params: { type: '5' } },
+      { params: { type: '6' } },
+      { params: { type: '7' } },
+      { params: { type: '8' } },
+    ],
+    fallback: false, // See the "fallback" section below
+  }
+}
