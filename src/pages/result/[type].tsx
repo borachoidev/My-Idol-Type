@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
 import 'twin.macro'
-import React, { ReactElement, useEffect, useMemo, useState } from 'react'
+import React, { ReactElement, useEffect, useMemo } from 'react'
 
 import Layout from '~/components/Layout'
 
@@ -65,6 +65,10 @@ function Result({ result, type }: { result: IResult; type: string }) {
     )
   }
 
+  const shareToLink = () => {
+    alert('링크가 복사되었어요!')
+  }
+
   if (!result) return null
   return (
     <>
@@ -101,6 +105,10 @@ function Result({ result, type }: { result: IResult; type: string }) {
         <div tw="px-3 py-1">
           <p tw=" text-center text-gray-500">친구에게 나의 아이돋 유형 공유하기</p>
           <div tw="flex space-x-2 justify-center">
+            <CopyToClipboard text={pageUrl}>
+              <DefaultLinkButton onClick={shareToLink} />
+            </CopyToClipboard>
+
             <KakaoLinkButton onClick={shareToKaKao} id="kakao-link-btn" />
             <FaceBookLinkButton onClick={shareToFacebook} />
             <a
@@ -139,6 +147,14 @@ const FaceBookLinkButton = styled.div`
 `
 const TwitterLinkButton = styled.div`
   background: url('/images/share/twitter.png');
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`
+const DefaultLinkButton = styled.div`
+  background: #eee url('/images/share/link.png');
+  border-radius: 3px;
   background-size: cover;
   width: 32px;
   height: 32px;
