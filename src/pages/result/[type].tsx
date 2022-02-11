@@ -103,7 +103,7 @@ function Result({ result, type }: { result: IResult; type: string }) {
           </Link>
         </div>
         <div tw="px-3 py-1">
-          <p tw=" text-center text-gray-500">친구에게 나의 아이돋 유형 공유하기</p>
+          <p tw=" text-center text-gray-500">친구에게 나의 아이돌 유형 공유하기</p>
           <div tw="flex space-x-2 justify-center">
             <CopyToClipboard text={pageUrl}>
               <DefaultLinkButton onClick={shareToLink} />
