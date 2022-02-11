@@ -4,7 +4,6 @@ import 'twin.macro'
 
 function Footer() {
   const adfit = useRef<HTMLDivElement>(null)
-  const { pathname } = useRouter()
 
   useEffect(() => {
     let ins: HTMLModElement = document.createElement('ins')
@@ -22,7 +21,7 @@ function Footer() {
 
     current!.appendChild(ins)
     current!.appendChild(scr)
-  }, [pathname])
+  }, [])
 
   return (
     <footer>
