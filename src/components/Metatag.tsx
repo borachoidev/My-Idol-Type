@@ -1,4 +1,4 @@
-import { Head } from 'next/document'
+import Head from 'next/head'
 import React from 'react'
 
 interface MetatagProps {
@@ -21,6 +21,10 @@ function Metatag({
       <meta property="og:site_name" content="MITT 내아이돌유형테스트" />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={image} />
+      <meta name="twitter:card" content="photo" />
     </Head>
   )
 }
