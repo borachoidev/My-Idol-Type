@@ -49,7 +49,7 @@ function Result({ result, type }: { result: IResult; type: string }) {
     const { Kakao } = window
     Kakao.Link.sendCustom({
       templateId: 70113,
-      templateArgs: { NAME: result?.name, THUM: result?.og },
+      templateArgs: { NAME: result.name, THUM: result.og },
     })
   }
 
@@ -61,9 +61,7 @@ function Result({ result, type }: { result: IResult; type: string }) {
         method: 'share',
         href: pageUrl,
       },
-      function (response: any) {
-        console.log(response)
-      }
+      function (response: any) {}
     )
   }
 
