@@ -27,11 +27,23 @@ function Result() {
     console.log(window.location.origin + window.location.pathname)
     if (typeof window === 'undefined') return
     initKakaoSdk()
+    initFacebookSdk()
   }, [])
 
   const initKakaoSdk = () => {
     const { Kakao } = window
     if (!Kakao.isInitialized()) Kakao.init(KAKAO_KEY)
+  }
+
+  const initFacebookSdk = () => {
+    const { FB } = window
+
+    FB.init({
+      appId: FB_APP_ID,
+      'js[src]': `https://connect.facebook.net/en_US/sdk.js#version=v13.0&appId=${FB_APP_ID}&xfbml=true&autoLogAppEvents=true`,
+      xfbml: true,
+      version: 'v13.0',
+    })
   }
 
   const shareToKaKao = () => {
@@ -40,6 +52,20 @@ function Result() {
       templateId: 70113,
       templateArgs: { NAME: result?.name, THUM: result?.og },
     })
+  }
+
+  const shareToFacebook = () => {
+    const { FB } = window
+    FB.ui(
+      {
+        display: 'popup',
+        method: 'share',
+        href: window.location.origin + window.location.pathname,
+      },
+      function (response: any) {
+        console.log(response)
+      }
+    )
   }
 
   useEffect(() => {
@@ -81,6 +107,7 @@ function Result() {
         <p tw=" text-center text-gray-500">친구에게 나의 아이돋 유형 공유하기</p>
         <div tw="flex space-x-2 justify-center">
           <KakaoLinkButton onClick={shareToKaKao} id="kakao-link-btn" />
+          <FaceBookLinkButton onClick={shareToFacebook} />
         </div>
       </div>
     </section>
@@ -95,6 +122,13 @@ Result.getLayout = function getLayout(page: ReactElement) {
 
 const KakaoLinkButton = styled.div`
   background: url('/images/share/kakao.png');
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`
+const FaceBookLinkButton = styled.div`
+  background: url('/images/share/facebook.png');
   background-size: cover;
   width: 32px;
   height: 32px;
