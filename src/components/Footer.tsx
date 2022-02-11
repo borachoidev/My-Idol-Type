@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router'
 import React, { useEffect, useRef } from 'react'
 import 'twin.macro'
 
