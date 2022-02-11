@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import React, { ReactElement, useEffect, useState } from 'react'
+import React, { ReactElement, useEffect, useMemo, useState } from 'react'
 import Layout from '../../components/Layout'
 
 import { infoList } from '../../data'
@@ -23,8 +23,11 @@ function Result() {
 
   const { type } = router.query
 
+  const pageUrl = useMemo(() => {
+    if (typeof window !== 'undefined') return `${window.location.origin}${window.location.pathname}`
+  }, [])
+
   useEffect(() => {
-    console.log(window.location.origin + window.location.pathname)
     if (typeof window === 'undefined') return
     initKakaoSdk()
     initFacebookSdk()
@@ -60,7 +63,7 @@ function Result() {
       {
         display: 'popup',
         method: 'share',
-        href: window.location.origin + window.location.pathname,
+        href: pageUrl,
       },
       function (response: any) {
         console.log(response)
@@ -108,6 +111,13 @@ function Result() {
         <div tw="flex space-x-2 justify-center">
           <KakaoLinkButton onClick={shareToKaKao} id="kakao-link-btn" />
           <FaceBookLinkButton onClick={shareToFacebook} />
+          <a
+            target="_blank"
+            href={`https://twitter.com/intent/tweet?original_referer=${pageUrl}&text=내가 만약 아이돌이라면? 나는 ${result.name} !&url=${pageUrl}&hashtags=내아이돌유형테스트,MITT`}
+            rel="noreferrer"
+          >
+            <TwitterLinkButton />
+          </a>
         </div>
       </div>
     </section>
@@ -129,6 +139,13 @@ const KakaoLinkButton = styled.div`
 `
 const FaceBookLinkButton = styled.div`
   background: url('/images/share/facebook.png');
+  background-size: cover;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+`
+const TwitterLinkButton = styled.div`
+  background: url('/images/share/twitter.png');
   background-size: cover;
   width: 32px;
   height: 32px;
