@@ -1,7 +1,7 @@
-import { GlobalStyles, styled } from 'twin.macro'
-import { AppProps } from 'next/app'
-import { NextPage } from 'next'
 import { ReactElement, ReactNode } from 'react'
+import { NextPage } from 'next'
+import { AppProps } from 'next/app'
+import { GlobalStyles, styled } from 'twin.macro'
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode

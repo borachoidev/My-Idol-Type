@@ -1,7 +1,8 @@
-import Link from 'next/link'
 import React, { ReactElement } from 'react'
-import 'twin.macro'
+import Link from 'next/link'
 import Image from 'next/image'
+import 'twin.macro'
+
 import Layout from '../components/Layout'
 import Metatag from '~/components/Metatag'
 
