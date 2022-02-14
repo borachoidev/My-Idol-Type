@@ -24,10 +24,10 @@ declare global {
 function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const getLayout = Component.getLayout ?? ((page) => page)
   const router = useRouter()
-  const { gtag } = window
+
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      gtag.pageview(url)
+      window.gtag.pageview(url)
     }
     router.events.on('routeChangeComplete', handleRouteChange)
     return () => {
