@@ -11,6 +11,21 @@ class MyDocument extends Document {
           <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
           <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-60ca01f6b5f03663" />
           <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+          {/* Global Site Tag (gtag.js) - Google Analytics */}
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', '${GA_TRACKING_ID}', {
+              page_path: window.location.pathname,
+            });
+          `,
+            }}
+          />
         </Head>
         <body>
           <Main />
