@@ -1,5 +1,5 @@
-import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
+import { useRouter } from 'next/router'
 import 'twin.macro'
 
 function Answer({ answer, steps, types }: any) {
@@ -21,6 +21,7 @@ function Answer({ answer, steps, types }: any) {
     <div
       tw="border border-gray-200 rounded-lg py-4 px-2 cursor-pointer word-break[keep-all]"
       onClick={goNext}
+      role="button"
     >
       {answer.answer}
     </div>

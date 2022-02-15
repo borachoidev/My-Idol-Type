@@ -1,9 +1,10 @@
 import React, { ReactElement, useState } from 'react'
-import Answer from '../components/Answer'
-import Layout from '../components/Layout'
-import { qnaList } from '../data'
 import 'twin.macro'
+
+import Answer from '~/components/Answer'
+import Layout from '~/components/Layout'
 import Metatag from '~/components/Metatag'
+import { qnaList } from '~/data'
 
 const Test = () => {
   const [step, setStep] = useState<number>(0)
