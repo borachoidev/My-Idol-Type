@@ -21,6 +21,7 @@
 ### 유형 검사
 
 각 문항별로 지표를 두고 계산하여 유형을 산출합니다.
+
 <img width="320" alt="검사중" src="https://user-images.githubusercontent.com/66766189/153574923-b8b3eaa0-24cc-4997-ab60-5942a4ff8910.gif"/>
 
 ### 모든 유형 보기

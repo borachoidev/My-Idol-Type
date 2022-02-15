@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "내 아이돌 유형 테스트",
+  "name": "My idol type test",
   "icons": [
     {
       "src": "favicon.ico",
@@ -21,7 +21,7 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "description":"아이돌 유형 테스트",
+  "description": "아이돌 유형 테스트",
   "background_color": "#ffffff",
-  "lang":"ko-KR"
+  "lang": "ko-KR"
 }
