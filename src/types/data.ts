@@ -1,9 +1,9 @@
 export interface IQnA {
   question: string
-  options: IOptions[]
+  options: IOption[]
 }
 
-export interface IOptions {
+export interface IOption {
   answer: string
   type: TypeCategory
 }
