@@ -1,11 +1,13 @@
 import React from 'react'
 import tw, { styled } from 'twin.macro'
+
 import Header from '~/components/Header'
-import Footer from './Footer'
+import Footer from '~/components/Footer'
 
 interface LayoutProps {
   children: React.ReactElement
 }
+
 function Layout({ children, ...props }: LayoutProps) {
   return (
     <>

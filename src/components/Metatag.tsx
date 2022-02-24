@@ -6,6 +6,7 @@ interface MetatagProps {
   description?: string
   image?: string
 }
+
 function Metatag({
   title = 'My idol type test',
   description = '나의 아이돌 유형을 알아보자!',

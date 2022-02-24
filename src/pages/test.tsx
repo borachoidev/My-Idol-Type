@@ -7,6 +7,7 @@ import Option from '~/components/Option'
 import Layout from '~/components/Layout'
 import Metatag from '~/components/Metatag'
 import ProgressBar from '~/components/ProgressBar'
+
 import { IQnA } from '~/types/data'
 
 function Test({ qna }: InferGetStaticPropsType<typeof getStaticProps>) {
@@ -128,6 +129,7 @@ export default Test
 Test.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
+
 export const getStaticProps: GetStaticProps = async (context) => {
   const { data } = await import(`~/data/qna.json`)
 

@@ -1,9 +1,11 @@
-import Image from 'next/image'
 import React, { ReactElement } from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
+import 'twin.macro'
+
 import Layout from '~/components/Layout'
 import { infoList } from '~/data'
-import 'twin.macro'
-import Link from 'next/link'
+
 import Metatag from '~/components/Metatag'
 
 export const Types = () => {
