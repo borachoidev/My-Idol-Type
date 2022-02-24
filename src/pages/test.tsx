@@ -10,7 +10,10 @@ import ProgressBar from '~/components/ProgressBar'
 
 import { IQnA } from '~/types/data'
 
-function Test({ qna }: InferGetStaticPropsType<typeof getStaticProps>) {
+interface TestProps {
+  qna: IQnA[]
+}
+function Test({ qna }: TestProps) {
   const [step, setStep] = useState<number>(0)
   const router = useRouter()
 
@@ -97,7 +100,8 @@ function Test({ qna }: InferGetStaticPropsType<typeof getStaticProps>) {
     return res
   }
 
-  const currentData: IQnA = useMemo(() => qna[step], [step])
+  const currentData = useMemo(() => qna[step], [step])
+
   return (
     <>
       <Metatag />
