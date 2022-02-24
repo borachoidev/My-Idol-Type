@@ -18,10 +18,7 @@ function Answer({ answer, steps, types }: any) {
   }, [type])
 
   return (
-    <div
-      tw="border border-gray-200 rounded-lg py-4 px-2 cursor-pointer word-break[keep-all]"
-      onClick={goNext}
-    >
+    <div tw="border border-gray-200 rounded-lg py-4 px-2 cursor-pointer word-break[keep-all]" onClick={goNext}>
       {answer.answer}
     </div>
   )
@@ -86,9 +83,12 @@ function Answer({ answer, steps, types }: any) {
       case 'INFJ':
         res = '7'
         break
-      default:
+      case 'ESTJ':
+      case 'ENTJ':
         res = '8'
         break
+      default:
+        throw new Error('잘못된 타입입니다')
     }
     return res
   }

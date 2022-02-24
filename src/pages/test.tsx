@@ -4,6 +4,7 @@ import Layout from '../components/Layout'
 import { qnaList } from '../data'
 import 'twin.macro'
 import Metatag from '~/components/Metatag'
+import ProgressBar from '~/components/ProgressBar'
 
 const Test = () => {
   const [step, setStep] = useState<number>(0)
@@ -32,12 +33,7 @@ const Test = () => {
     <>
       <Metatag />
       <section tw="px-4">
-        <span>{step + 1}/12</span>
-        <div tw="bg-gray-100 rounded-full overflow-hidden height[10px]">
-          <div style={{ width: `${step * 8.333}%` }} tw="bg-pink-700 transition-all">
-            &nbsp;
-          </div>
-        </div>
+        <ProgressBar step={step} />
         <article tw="p-5 text-center word-break[keep-all] text-xl text-pink-500 height[120px]">
           <p>{qnaList[step].q}</p>
         </article>
