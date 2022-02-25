@@ -10,7 +10,7 @@ interface MetatagProps {
 function Metatag({
   title = 'My idol type test',
   description = '나의 아이돌 유형을 알아보자!',
-  image = 'https://raw.githubusercontent.com/borachoidev/My-Idol-Type/dff71dfbf597a5e635cb70109acccd88557c2a7d/public/images/main.gif',
+  image = 'https://rawcdn.githack.com/borachoidev/My-Idol-Type/9db39f52240ecc175551323967d908cdc78fd6f0/public/images/5.jpg?raw=true',
 }: MetatagProps) {
   return (
     <Head>

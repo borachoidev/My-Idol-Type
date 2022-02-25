@@ -1,18 +1,17 @@
 import React, { ReactElement } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import 'twin.macro'
 
 import Layout from '../components/Layout'
 import Metatag from '~/components/Metatag'
+import { MAIN_IMG_CDN } from '~/constants'
 
 function Home() {
   return (
     <>
       <Metatag />
       <main tw="space-y-5">
-        <Image width={425} height={425} src={`/images/main.gif`} alt="미리보기" />
-
+        <img src={MAIN_IMG_CDN} alt="미리보기" />
         <p tw="text-sm word-break[keep-all] text-lg px-2 text-center">
           한국을 넘어서 전 세계사람들의 <br />
           마음을 사로잡은
@@ -35,6 +34,7 @@ function Home() {
 }
 
 export default Home
+
 Home.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
