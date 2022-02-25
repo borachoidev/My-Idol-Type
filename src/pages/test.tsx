@@ -1,6 +1,8 @@
 import React, { ReactElement, useLayoutEffect, useMemo, useState } from 'react'
 import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import 'twin.macro'
 
 import Option from '~/components/Option'
@@ -15,6 +17,7 @@ interface TestProps {
 }
 function Test({ qna }: TestProps) {
   const router = useRouter()
+  const { t } = useTranslation()
 
   const [step, setStep] = useState<number>(0)
   const [finish, setFinish] = useState(false)
@@ -86,25 +89,27 @@ function Test({ qna }: TestProps) {
         <ProgressBar step={step} />
 
         <article tw="p-5 text-center text-xl text-pink-500 height[120px] word-break[keep-all]">
-          <p>{currentData.question}</p>
+          <p>{t(`qna:${currentData.question}`)}</p>
         </article>
 
         <article tw="text-center space-y-4">
-          {currentData.options.map((answer, i) => (
-            <Option
-              option={answer}
-              key={i}
-              onClick={() => {
-                const [key, value] = Object.entries(answer.type)[0]
-                setType({
-                  ...type,
-                  [key]: type[key] + value,
-                })
-                if (step !== 11) setStep((_step) => _step + 1)
-                else setFinish(true)
-              }}
-            />
-          ))}
+          {currentData.options.map((answer, i) => {
+            return (
+              <Option
+                option={t(`qna:${answer.answer}`)}
+                key={i}
+                onClick={() => {
+                  const [key, value] = Object.entries(answer.type)[0]
+                  setType({
+                    ...type,
+                    [key]: type[key] + value,
+                  })
+                  if (step !== 11) setStep((_step) => _step + 1)
+                  else setFinish(true)
+                }}
+              />
+            )
+          })}
         </article>
       </section>
     </>
@@ -116,8 +121,8 @@ Test.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async ({ locale = 'ko' }) => {
   const { data } = await import(`~/data/qna.json`)
 
-  return { props: { qna: data } }
+  return { props: { qna: data, ...(await serverSideTranslations(locale, ['qna'])) } }
 }

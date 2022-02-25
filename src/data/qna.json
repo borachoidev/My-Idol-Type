@@ -1,158 +1,158 @@
 {
   "data": [
     {
-      "question": "오디션 중 갑자기 다른 장르의 노래를\n불러보라는 요구를 받았다! 나는 ...",
+      "question": "question1",
       "options": [
         {
-          "answer": "a. 이럴줄 알고 진작에 준비했지! 혹시 몰라 준비해둔 노래를 부른다",
+          "answer": "answer1-a",
           "type": { "J": 1 }
         },
         {
-          "answer": "b. 따로 준비한 노래 없이 그냥 노래방 애창곡을 부른다",
+          "answer": "answer1-b",
           "type": { "J": -1 }
         }
       ]
     },
     {
-      "question": "연습 생활을 하던 중 다른 친구가 부상을 당했다!\n내 반응은?",
+      "question": "question2",
       "options": [
         {
-          "answer": "a. \"빨리 병원부터 가봐!\" ",
+          "answer": "answer2-a",
           "type": { "T": 1 }
         },
         {
-          "answer": "b. \"어떡해! 괜찮아? 많이 아파?\"",
+          "answer": "answer2-b",
           "type": { "T": -1 }
         }
       ]
     },
     {
-      "question": "데뷔조로 선발되어 숙소 생활을 하게 되었다!\n내 방 상태는?",
+      "question": "question3",
       "options": [
         {
-          "answer": "a. 정리 잘 된 깔끔한 방",
+          "answer": "answer3-a",
           "type": { "J": 1 }
         },
         {
-          "answer": "b. 내 물건이 어디있는 지 나만 아는 방",
+          "answer": "answer3-b",
           "type": { "J": -1 }
         }
       ]
     },
     {
-      "question": "이번 앨범에 작사를 참여하게 되었다!\n내가 작사하는 가사는 어떤 내용?",
+      "question": "question4",
       "options": [
         {
-          "answer": "a. 나의 경험을 바탕으로한 가사",
+          "answer": "answer4-a",
           "type": { "N": -1 }
         },
         {
-          "answer": "b. 상상의 나래를 펼쳐 만든 가사",
+          "answer": "answer4-b",
           "type": { "N": 1 }
         }
       ]
     },
     {
-      "question": "\"신곡에 대해서 소개해주세요!\"",
+      "question": "question5",
       "options": [
         {
-          "answer": "a. \"이번 앨범은 듣기만 해도 시원해지는 여름에 잘 어울리는 곡입니다!”",
+          "answer": "answer5-a",
           "type": { "N": 1 }
         },
         {
-          "answer": "b. \"이번 앨범은 트로피컬 하우스 장르의 여름 바다를 놀러가는 가사의 곡입니다!\"",
+          "answer": "answer5-b",
           "type": { "N": -1 }
         }
       ]
     },
 
     {
-      "question": "예능 프로그램 제의가 들어왔다!\n  내가 하고 싶은 예능은?",
+      "question": "question6",
       "options": [
         {
-          "answer": "a. 런O맨",
+          "answer": "answer6-a",
           "type": { "T": 1 }
         },
         {
-          "answer": "b. 효O네 민박",
+          "answer": "answer6-b",
           "type": { "T": -1 }
         }
       ]
     },
     {
-      "question": "첫 예능 출연 전날밤! 나는 ...",
+      "question": "question7",
       "options": [
         {
-          "answer": "a. \"에이 몰라~ 나의 꾸밈없는 모습을 보여주지” 그냥 잠이 든다",
+          "answer": "answer7-a",
           "type": { "J": -1 }
         },
         {
-          "answer": "b. 뭘 시킬지 몰라 있는 개인기를 연습하다 잠이든다",
+          "answer": "answer7-b",
           "type": { "J": 1 }
         }
       ]
     },
     {
-      "question": "신곡 활동이 끝나고 휴가를 받았다!\n내가 보내고 싶은 휴가는?",
+      "question": "question8",
       "options": [
         {
-          "answer": "a. 집에서 편히 쉴래~",
+          "answer": "answer8-a",
           "type": { "E": -1 }
         },
         {
-          "answer": "b. 휴가는 뭐니 뭐니 해도 여행이지!",
+          "answer": "answer8-b",
           "type": { "E": 1 }
         }
       ]
     },
     {
-      "question": "다음 앨범 컨셉에 대해 논의를 하게 되었다!\n내가 하고 싶은 컨셉은?",
+      "question": "question9",
       "options": [
         {
-          "answer": "a. 기존 컨셉과 비슷하지만 다른 컨셉",
+          "answer": "answer9-a",
           "type": { "N": -1 }
         },
         {
-          "answer": "b. 기존 컨셉과 완전 반대의 컨셉",
+          "answer": "answer9-b",
           "type": { "N": 1 }
         }
       ]
     },
     {
-      "question": "라이브 방송 중 팬이\"나랑 결혼해줘!!” 라고\n말했을 때 나의 반응은?",
+      "question": "question10",
       "options": [
         {
-          "answer": "a. \"안돼요~” 현실적으로 불가능한건 안 돼~ ",
+          "answer": "answer10-a",
           "type": { "T": 1 }
         },
         {
-          "answer": "b. \"좋아요!” 우리 팬이라면 뭐든지 좋아~ ",
+          "answer": "answer10-b",
           "type": { "T": -1 }
         }
       ]
     },
     {
-      "question": "음악 방송 전 처음 보는 후배 아이돌이\n인사하러 찾아왔다! 나는 ...",
+      "question": "question11",
       "options": [
         {
-          "answer": "a. \"아..안녕, 수고해!\" 어색한 대화를 서둘러 마무리한다.",
+          "answer": "answer11-a",
           "type": { "E": -1 }
         },
         {
-          "answer": "b. \"너네가 OO이구나! 오늘 무대도 잘해!\" 잘 몰라도 일단은 아는척 해준다. ",
+          "answer": "answer11-b",
           "type": { "E": 1 }
         }
       ]
     },
     {
-      "question": "팬사인회에서 팬이 하트를 해달라고 한다!\n나는 ...",
+      "question": "question12",
       "options": [
         {
-          "answer": "a. 각종 하트 + 윙크 + 잔망부리기 ",
+          "answer": "answer12-a",
           "type": { "E": 1 }
         },
         {
-          "answer": "b. 수줍게 하트...💕",
+          "answer": "answer12-b",
           "type": { "E": -1 }
         }
       ]
