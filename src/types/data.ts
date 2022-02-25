@@ -5,10 +5,11 @@ export interface IQnA {
 
 export interface IOption {
   answer: string
-  type: TypeCategory
+  type: Score
 }
-
-export type TypeCategory = 'E' | 'I' | 'S' | 'N' | 'T' | 'F' | 'J' | 'P'
+export type Score = {
+  [key: string]: number
+}
 
 export type ResultType =
   | 'ISTP'

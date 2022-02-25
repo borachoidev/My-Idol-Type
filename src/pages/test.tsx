@@ -1,5 +1,5 @@
-import React, { ReactElement, useEffect, useMemo, useState } from 'react'
-import { GetStaticProps, InferGetStaticPropsType } from 'next'
+import React, { ReactElement, useLayoutEffect, useMemo, useState } from 'react'
+import { GetStaticProps } from 'next'
 import { useRouter } from 'next/router'
 import 'twin.macro'
 
@@ -14,52 +14,30 @@ interface TestProps {
   qna: IQnA[]
 }
 function Test({ qna }: TestProps) {
-  const [step, setStep] = useState<number>(0)
   const router = useRouter()
 
-  const [type, setType] = useState({
+  const [step, setStep] = useState<number>(0)
+  const [finish, setFinish] = useState(false)
+  const [type, setType] = useState<{ [key: string]: number }>({
     E: 0,
-    I: 0,
     N: 0,
-    S: 0,
     T: 0,
-    F: 0,
-    P: 0,
     J: 0,
   })
+  const currentData = useMemo<IQnA>(() => qna[step], [step])
+  useLayoutEffect(() => {
+    if (!finish) return
 
-  useEffect(() => {
-    const typeArray = Object.values(type)
-    let result = typeArray.reduce((a, b) => a + b)
-    if (result === 12) {
-      const res = calculateResult()
-      router.push(`/result/${res}`)
-    }
-  }, [type])
+    const res = calculateResult()
+    router.push(`/result/${res}`)
+  }, [finish])
 
   function calculateResult() {
     let res = ''
-    if (type.E > type.I) {
-      res += 'E'
-    } else {
-      res += 'I'
-    }
-
-    if (type.N > type.S) {
-      res += 'N'
-    } else {
-      res += 'S'
-    }
-    if (type.F > type.T) {
-      res += 'F'
-    } else {
-      res += 'T'
-    }
-    if (type.P > type.J) {
-      res += 'P'
-    } else {
-      res += 'J'
-    }
+    res += type.E > 0 ? 'E' : 'I'
+    res += type.N > 0 ? 'N' : 'S'
+    res += type.T > 0 ? 'T' : 'F'
+    res += type.J > 0 ? 'J' : 'P'
 
     switch (res) {
       case 'ISTP':
@@ -100,15 +78,14 @@ function Test({ qna }: TestProps) {
     return res
   }
 
-  const currentData = useMemo(() => qna[step], [step])
-
+  if (!currentData) return null
   return (
     <>
       <Metatag />
       <section tw="px-4">
         <ProgressBar step={step} />
 
-        <article tw="p-5 text-center word-break[keep-all] text-xl text-pink-500 height[120px]">
+        <article tw="p-5 text-center text-xl text-pink-500 height[120px] word-break[keep-all]">
           <p>{currentData.question}</p>
         </article>
 
@@ -118,8 +95,13 @@ function Test({ qna }: TestProps) {
               option={answer}
               key={i}
               onClick={() => {
-                setType({ ...type, [answer.type]: type[answer.type] + 1 })
+                const [key, value] = Object.entries(answer.type)[0]
+                setType({
+                  ...type,
+                  [key]: type[key] + value,
+                })
                 if (step !== 11) setStep((_step) => _step + 1)
+                else setFinish(true)
               }}
             />
           ))}
