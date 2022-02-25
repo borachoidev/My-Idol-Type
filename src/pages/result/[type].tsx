@@ -1,26 +1,20 @@
+import React, { ReactElement, useEffect, useMemo } from 'react'
+import { GetStaticPaths, GetStaticProps } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import 'twin.macro'
-import React, { ReactElement, useEffect, useMemo } from 'react'
-
-import Layout from '~/components/Layout'
-
-import { infoList } from '~/data'
+import { styled } from 'twin.macro'
 
 import { FB_APP_ID, KAKAO_KEY } from '~/constants'
-import { styled } from 'twin.macro'
+import { ITestResult } from '~/types/data'
+import Layout from '~/components/Layout'
 import Metatag from '~/components/Metatag'
-import { GetStaticPaths, GetStaticProps } from 'next'
 import Share from '~/components/Share'
 
-export interface IResult {
-  name: string
-  desc: string
-  partner: string
-  id: number
-  og: string
+interface ResultProps {
+  result: ITestResult
+  type: string
 }
-function Result({ result, type }: { result: IResult; type: string }) {
+function Result({ result, type }: ResultProps) {
   const pageUrl = useMemo(() => `https://my-idol-type-test.vercel.app/result/${type}`, [])
 
   useEffect(() => {
@@ -120,15 +114,17 @@ const DefaultLinkButton = styled.div`
   cursor: pointer;
 `
 
-export const getStaticProps: GetStaticProps = (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const { data: testResult } = await import('~/data/result.json')
   const { params } = context
+
   if (!params)
     return {
       notFound: true,
     }
 
   return {
-    props: { result: infoList[Number(params.type) - 1], type: params.type },
+    props: { result: testResult[Number(params.type) - 1], type: params.type },
   }
 }
 

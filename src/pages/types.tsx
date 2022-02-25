@@ -4,29 +4,33 @@ import Link from 'next/link'
 import 'twin.macro'
 
 import Layout from '~/components/Layout'
-import { infoList } from '~/data'
 import Metatag from '~/components/Metatag'
+import { GetStaticProps } from 'next'
+import { ITestResult } from '~/types/data'
 
-export const Types = () => {
+interface TypesProps {
+  testResult: ITestResult[]
+}
+function Types({ testResult }: TypesProps) {
   return (
     <>
       <Metatag title="모든 유형 한번에 보기" />
       <section tw="space-y-8 text-center">
         <h1 tw="text-xl pt-5 text-pink-500">모든 유형 한번에 보기</h1>
-        {infoList.map((info) => (
-          <React.Fragment key={info.id}>
-            <Link href={`/result/${info.id}`}>
+        {testResult.map((result) => (
+          <React.Fragment key={result.id}>
+            <Link href={`/result/${result.id}`}>
               <article tw="cursor-pointer space-y-2 hover:opacity-50">
                 <div>
                   <Image
                     width={200}
                     height={200}
-                    src={`/images/${info.id}.jpg`}
-                    alt={info.name}
+                    src={`/images/${result.id}.jpg`}
+                    alt={result.name}
                     tw="rounded-full shadow"
                   />
                 </div>
-                <p tw="text-gray-500 ">{info.name}</p>
+                <p tw="text-gray-500 ">{result.name}</p>
               </article>
             </Link>
           </React.Fragment>
@@ -47,4 +51,11 @@ export default Types
 
 Types.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
+}
+export const getStaticProps: GetStaticProps = async (context) => {
+  const response = await import('~/data/result.json')
+  const testResult: ITestResult[] = response.data
+  return {
+    props: { testResult },
+  }
 }

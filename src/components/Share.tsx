@@ -1,8 +1,9 @@
-import { CopyToClipboard } from 'react-copy-to-clipboard'
 import { styled } from 'twin.macro'
-import { IResult } from '~/pages/result/[type]'
+import { CopyToClipboard } from 'react-copy-to-clipboard'
+
+import { ITestResult } from '~/types/data'
 interface ShareProps {
-  result: IResult
+  result: ITestResult
   pageUrl: string
 }
 function Share({ result, pageUrl }: ShareProps) {
