@@ -77,7 +77,13 @@ function Result({ result, type }: ResultProps) {
             </button>
           </Link>
         </div>
-        <Share pageUrl={pageUrl} result={result} />
+        <Share
+          pageUrl={pageUrl}
+          result={{ ...result, name: t(`result:${result.name}`) }}
+          title={t('result:share')}
+          clipboard={t('result:clipboard')}
+          twitter={t('result:twitter')}
+        />
       </section>
     </>
   )

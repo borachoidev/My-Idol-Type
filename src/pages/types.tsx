@@ -7,16 +7,19 @@ import Layout from '~/components/Layout'
 import Metatag from '~/components/Metatag'
 import { GetStaticProps } from 'next'
 import { ITestResult } from '~/types/data'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useTranslation } from 'next-i18next'
 
 interface TypesProps {
   testResult: ITestResult[]
 }
 function Types({ testResult }: TypesProps) {
+  const { t } = useTranslation()
   return (
     <>
-      <Metatag title="모든 유형 한번에 보기" />
+      <Metatag title={t('result:all-type')} />
       <section tw="space-y-8 text-center">
-        <h1 tw="text-xl pt-5 text-pink-500">모든 유형 한번에 보기</h1>
+        <h1 tw="text-xl pt-5 text-pink-500">{t('result:all-type')}</h1>
         {testResult.map((result) => (
           <React.Fragment key={result.id}>
             <Link href={`/result/${result.id}`}>
@@ -30,7 +33,7 @@ function Types({ testResult }: TypesProps) {
                     tw="rounded-full shadow"
                   />
                 </div>
-                <p tw="text-gray-500 ">{result.name}</p>
+                <p tw="text-gray-500 ">{t(`result:${result.name}`)}</p>
               </article>
             </Link>
           </React.Fragment>
@@ -38,7 +41,7 @@ function Types({ testResult }: TypesProps) {
         <div tw="p-3">
           <Link href="/test">
             <button type="button" tw="py-4 w-full rounded bg-gray-500 text-pink-300">
-              내 유형 알아보기
+              {t('result:find-my-type')}
             </button>
           </Link>
         </div>
@@ -52,10 +55,10 @@ export default Types
 Types.getLayout = function getLayout(page: ReactElement) {
   return <Layout>{page}</Layout>
 }
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async ({ locale = 'ko' }) => {
   const response = await import('~/data/result.json')
   const testResult: ITestResult[] = response.data
   return {
-    props: { testResult },
+    props: { testResult, ...(await serverSideTranslations(locale, ['result'])) },
   }
 }
