@@ -1,5 +1,4 @@
 import React, { ReactElement } from 'react'
-import Image from 'next/image'
 import Link from 'next/link'
 import 'twin.macro'
 
@@ -23,14 +22,14 @@ function Types({ testResult }: TypesProps) {
         {testResult.map((result) => (
           <React.Fragment key={result.id}>
             <Link href={`/result/${result.id}`}>
-              <article tw="cursor-pointer space-y-2 hover:opacity-50">
+              <article tw="cursor-pointer space-y-2 opacity-50 hover:opacity-100 ">
                 <div>
-                  <Image
+                  <img
                     width={200}
                     height={200}
                     src={`/images/${result.id}.jpg`}
                     alt={result.name}
-                    tw="rounded-full shadow"
+                    tw="rounded-full shadow inline"
                   />
                 </div>
                 <p tw="text-gray-500 ">{t(`result:${result.name}`)}</p>

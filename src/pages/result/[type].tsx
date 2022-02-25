@@ -1,6 +1,5 @@
 import React, { ReactElement, useEffect, useMemo } from 'react'
 import { GetStaticPaths, GetStaticProps } from 'next'
-import Image from 'next/image'
 import Link from 'next/link'
 import { styled } from 'twin.macro'
 
@@ -50,7 +49,7 @@ function Result({ result, type }: ResultProps) {
         <div tw="p-3 space-y-3">
           <h1 tw="text-2xl font-bold px-5 text-pink-500 text-center">{t(`result:${result.name}`)}</h1>
           <div>
-            <Image width={425} height={425} src={`/images/${result.id}.jpg`} alt={result.name} />
+            <img width={425} height={425} src={`/images/${result.id}.jpg`} alt={result.name} />
           </div>
 
           <div tw="px-3 text-center">

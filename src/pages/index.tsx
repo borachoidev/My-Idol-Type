@@ -1,13 +1,13 @@
 import React, { ReactElement } from 'react'
 import { GetStaticProps } from 'next'
 import Link from 'next/link'
-import Image from 'next/image'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import 'twin.macro'
 
 import Layout from '../components/Layout'
 import Metatag from '~/components/Metatag'
+import { MAIN_IMG_CDN } from '~/constants'
 
 function Home() {
   const { t } = useTranslation()
@@ -15,11 +15,11 @@ function Home() {
     <>
       <Metatag />
       <main tw="space-y-5">
-        <Image width={425} height={425} src={`/images/main.gif`} alt="미리보기" />
+        <img src={MAIN_IMG_CDN} alt="미리보기" />
 
         <p tw="text-sm text-lg px-2 text-center">
           {t('intro:intro-1')}
-          <span tw="text-pink-500 font-bold">{t('intro:intro-kpop')}</span>
+          <span tw="text-pink-500 font-bold text-xl">{t('intro:intro-kpop')}</span>
           {t('intro:intro-2')}
           <span tw="text-pink-500 font-bold"> {t('intro:intro-start')}</span>
           {t('intro:intro-3')}

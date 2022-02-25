@@ -5,56 +5,56 @@
       "desc": "type1-desc",
       "partner": "type1-partner",
       "id": 1,
-      "og": "https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/1.jpg"
+      "og": "https://rawcdn.githack.com/borachoidev/My-Idol-Type/9db39f52240ecc175551323967d908cdc78fd6f0/public/images/1.jpg?raw=true"
     },
     {
       "name": "type2-name",
       "desc": "type2-desc",
       "partner": "type2-partner",
       "id": 2,
-      "og": "https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/2.jpg"
+      "og": "https://rawcdn.githack.com/borachoidev/My-Idol-Type/9db39f52240ecc175551323967d908cdc78fd6f0/public/images/2.jpg?raw=true"
     },
     {
       "name": "type3-name",
       "desc": "type3-desc",
       "partner": "type3-partner",
       "id": 3,
-      "og": "https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/3.jpg"
+      "og": "https://rawcdn.githack.com/borachoidev/My-Idol-Type/9db39f52240ecc175551323967d908cdc78fd6f0/public/images/3.jpg?raw=true"
     },
     {
       "name": "type4-name",
       "desc": "type4-desc",
       "partner": "type4-partner",
       "id": 4,
-      "og": "https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/4.jpg"
+      "og": "https://rawcdn.githack.com/borachoidev/My-Idol-Type/9db39f52240ecc175551323967d908cdc78fd6f0/public/images/4.jpg?raw=true"
     },
     {
       "name": "type5-name",
       "desc": "type5-desc",
       "partner": "type5-partner",
       "id": 5,
-      "og": "https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/5.jpg"
+      "og": "https://rawcdn.githack.com/borachoidev/My-Idol-Type/9db39f52240ecc175551323967d908cdc78fd6f0/public/images/5.jpg?raw=true"
     },
     {
       "name": "type6-name",
       "desc": "type6-desc",
       "partner": "type6-partner",
       "id": 6,
-      "og": "https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/6.jpg"
+      "og": "https://rawcdn.githack.com/borachoidev/My-Idol-Type/9db39f52240ecc175551323967d908cdc78fd6f0/public/images/6.jpg?raw=true"
     },
     {
       "name": "type7-name",
       "desc": "type7-desc",
       "partner": "type7-partner",
       "id": 7,
-      "og": "https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/7.jpg"
+      "og": "https://rawcdn.githack.com/borachoidev/My-Idol-Type/9db39f52240ecc175551323967d908cdc78fd6f0/public/images/7.jpg?raw=true"
     },
     {
       "name": "type8-name",
       "desc": "type8-desc",
       "partner": "type8-partner",
       "id": 8,
-      "og": "https://raw.githubusercontent.com/borachoidev/My-Idol-Type/c40bf3fc7f6a848d4d0260b2f9b523add331b405/public/images/8.jpg"
+      "og": "https://rawcdn.githack.com/borachoidev/My-Idol-Type/9db39f52240ecc175551323967d908cdc78fd6f0/public/images/8.jpg?raw=true"
     }
   ]
 }
