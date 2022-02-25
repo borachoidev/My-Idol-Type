@@ -12,7 +12,7 @@ function Home() {
     <>
       <Metatag />
       <main tw="space-y-5">
-        <img src={MAIN_IMG_CDN} alt="미리보기" />
+        <Image width={425} height={425} src={MAIN_IMG_CDN} alt="미리보기" />
 
         <p tw="text-sm word-break[keep-all] text-lg px-2 text-center">
           한국을 넘어서 전 세계사람들의 <br />
