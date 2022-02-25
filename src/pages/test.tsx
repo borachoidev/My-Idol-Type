@@ -88,7 +88,7 @@ function Test({ qna }: TestProps) {
       <section tw="px-4">
         <ProgressBar step={step} />
 
-        <article tw="p-5 text-center text-xl text-pink-500 height[120px] word-break[keep-all]">
+        <article tw="p-5 text-center text-xl text-pink-500 height[120px]">
           <p>{t(`qna:${currentData.question}`)}</p>
         </article>
 

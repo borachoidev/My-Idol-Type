@@ -17,7 +17,7 @@ function Home() {
       <main tw="space-y-5">
         <Image width={425} height={425} src={`/images/main.gif`} alt="미리보기" />
 
-        <p tw="text-sm word-break[keep-all] text-lg px-2 text-center">
+        <p tw="text-sm text-lg px-2 text-center">
           {t('intro:intro-1')}
           <span tw="text-pink-500 font-bold">{t('intro:intro-kpop')}</span>
           {t('intro:intro-2')}

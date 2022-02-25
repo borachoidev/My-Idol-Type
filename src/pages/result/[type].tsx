@@ -48,15 +48,13 @@ function Result({ result, type }: ResultProps) {
       <Metatag title={t(`result:${result.name}`)} description={t(`result:${result.desc}`)} image={result.og} />
       <section tw="space-y-3">
         <div tw="p-3 space-y-3">
-          <h1 tw="text-2xl font-bold word-break[keep-all] px-5 text-pink-500 text-center">
-            {t(`result:${result.name}`)}
-          </h1>
+          <h1 tw="text-2xl font-bold px-5 text-pink-500 text-center">{t(`result:${result.name}`)}</h1>
           <div>
             <Image width={425} height={425} src={`/images/${result.id}.jpg`} alt={result.name} />
           </div>
 
           <div tw="px-3 text-center">
-            <p tw="whitespace-pre-line word-break[keep-all] text-center">{t(`result:${result.desc}`)}</p>
+            <p tw="whitespace-pre-line text-center">{t(`result:${result.desc}`)}</p>
           </div>
         </div>
 
