@@ -3,10 +3,13 @@ import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 import { ITestResult } from '~/types/data'
 interface ShareProps {
+  title: string
+  clipboard: string
+  twitter: string
   result: ITestResult
   pageUrl: string
 }
-function Share({ result, pageUrl }: ShareProps) {
+function Share({ title, clipboard, twitter, result, pageUrl }: ShareProps) {
   const { name, og: thum } = result
   const shareToKaKao = () => {
     const { Kakao } = window
@@ -29,12 +32,12 @@ function Share({ result, pageUrl }: ShareProps) {
   }
 
   const shareToLink = () => {
-    alert('링크가 복사되었어요!')
+    alert(clipboard)
   }
 
   return (
     <div tw="px-3 py-1">
-      <p tw=" text-center text-gray-500">친구에게 나의 아이돋 유형 공유하기</p>
+      <p tw=" text-center text-gray-500">{title}</p>
       <div tw="flex space-x-2 justify-center">
         <CopyToClipboard text={pageUrl}>
           <DefaultLinkButton onClick={shareToLink} aria-label="클립보드복사" />
@@ -44,7 +47,7 @@ function Share({ result, pageUrl }: ShareProps) {
         <FaceBookLinkButton onClick={shareToFacebook} aria-label="페이스북으로공유" />
         <a
           target="_blank"
-          href={`https://twitter.com/intent/tweet?original_referer=${pageUrl}&text=내가 만약 아이돌이라면? 나는 ${result.name} !&url=${pageUrl}&hashtags=내아이돌유형테스트,MITT`}
+          href={`https://twitter.com/intent/tweet?original_referer=${pageUrl}&text=${twitter} ${result.name} !&url=${pageUrl}&hashtags=내아이돌유형테스트,MY_IDOL_TYPE_TEST,`}
           rel="noreferrer"
         >
           <TwitterLinkButton aria-label="트위터로공유" />

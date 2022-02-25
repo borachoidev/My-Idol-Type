@@ -1,8 +1,9 @@
 import { ReactElement, ReactNode, useEffect } from 'react'
 import { NextPage } from 'next'
 import { AppProps } from 'next/app'
-import { GlobalStyles, styled } from 'twin.macro'
 import { useRouter } from 'next/router'
+import { GlobalStyles, styled } from 'twin.macro'
+import { appWithTranslation } from 'next-i18next'
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode
@@ -49,7 +50,7 @@ const RootContainer = styled.div`
   min-height: 100vh;
   margin: 0 auto;
   background-color: #ffffff;
-  font-family: 'Jua', sans-serif;
+  font-family: 'M PLUS Rounded 1c', 'Jua', sans-serif;
 `
 
-export default MyApp
+export default appWithTranslation(MyApp)
