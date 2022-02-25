@@ -4,7 +4,6 @@ import Link from 'next/link'
 import 'twin.macro'
 
 import Layout from '~/components/Layout'
-
 import Metatag from '~/components/Metatag'
 import { GetStaticProps } from 'next'
 import { ITestResult } from '~/types/data'
