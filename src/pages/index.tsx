@@ -5,7 +5,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import 'twin.macro'
 
-import Layout from '../components/Layout'
+import Layout from '~/components/Layout'
 import Metatag from '~/components/Metatag'
 import { MAIN_IMG_CDN } from '~/constants'
 
