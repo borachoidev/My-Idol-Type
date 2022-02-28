@@ -158,6 +158,14 @@ export const getStaticPaths: GetStaticPaths = async () => {
       { params: { type: '6' }, locale: 'ja' },
       { params: { type: '7' }, locale: 'ja' },
       { params: { type: '8' }, locale: 'ja' },
+      { params: { type: '1' }, locale: 'en' },
+      { params: { type: '2' }, locale: 'en' },
+      { params: { type: '3' }, locale: 'en' },
+      { params: { type: '4' }, locale: 'en' },
+      { params: { type: '5' }, locale: 'en' },
+      { params: { type: '6' }, locale: 'en' },
+      { params: { type: '7' }, locale: 'en' },
+      { params: { type: '8' }, locale: 'en' },
     ],
     fallback: false, // See the "fallback" section below
   }
